@@ -19,7 +19,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let vc = MainSceneViewController()
+        self.present(vc, animated: true, completion: nil)
+    }
 
 }
 
