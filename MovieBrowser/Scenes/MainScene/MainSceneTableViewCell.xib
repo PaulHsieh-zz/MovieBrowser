@@ -27,34 +27,34 @@
                             <constraint firstAttribute="width" secondItem="QNe-QP-1Ea" secondAttribute="height" multiplier="500:750" id="mv7-rc-6PV"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzb-f2-Dwe">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Vzb-f2-Dwe">
                         <rect key="frame" x="141" y="21" width="235" height="20.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" red="0.80542630463643805" green="0.79661968954248352" blue="0.7984627119076797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gk-oG-5Ac">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="5gk-oG-5Ac">
                         <rect key="frame" x="141" y="51.5" width="235" height="17"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" red="0.80542630459999998" green="0.79661968949999995" blue="0.79846271189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vas-LN-Zfu">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vas-LN-Zfu">
                         <rect key="frame" x="141" y="78.5" width="235" height="16.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" red="0.80542630459999998" green="0.79661968949999995" blue="0.79846271189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="關注度 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3U-Vh-u63">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="關注度 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="b3U-Vh-u63">
                         <rect key="frame" x="141" y="171.5" width="54" height="17"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" red="0.80542630459999998" green="0.79661968949999995" blue="0.79846271189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cz-0I-x99">
-                        <rect key="frame" x="205" y="133.5" width="122.5" height="55"/>
+                        <rect key="frame" x="253.5" y="133.5" width="122.5" height="55"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="D41-fH-Cr8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="10.999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="D41-fH-Cr8">
                                 <rect key="frame" x="6" y="6" width="110.5" height="43"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" red="0.0012984208029619415" green="1" blue="0.77317831189527331" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -97,11 +97,11 @@
                     <constraint firstItem="Vzb-f2-Dwe" firstAttribute="leading" secondItem="QNe-QP-1Ea" secondAttribute="trailing" constant="10" id="89b-bb-zQJ"/>
                     <constraint firstItem="5gk-oG-5Ac" firstAttribute="top" secondItem="Vzb-f2-Dwe" secondAttribute="bottom" constant="10" id="Akv-bb-1QO"/>
                     <constraint firstItem="cei-fy-Reg" firstAttribute="top" secondItem="5Cz-0I-x99" secondAttribute="bottom" constant="10" id="B0r-8O-FUh"/>
-                    <constraint firstItem="5Cz-0I-x99" firstAttribute="leading" secondItem="b3U-Vh-u63" secondAttribute="trailing" constant="10" id="BDV-cH-zfp"/>
+                    <constraint firstItem="5Cz-0I-x99" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b3U-Vh-u63" secondAttribute="trailing" constant="10" id="BDV-cH-zfp"/>
                     <constraint firstItem="b3U-Vh-u63" firstAttribute="leading" secondItem="Vas-LN-Zfu" secondAttribute="leading" id="IGu-uN-9p3"/>
                     <constraint firstItem="5gk-oG-5Ac" firstAttribute="leading" secondItem="QNe-QP-1Ea" secondAttribute="trailing" constant="10" id="K3o-f2-da3"/>
                     <constraint firstItem="cei-fy-Reg" firstAttribute="top" secondItem="b3U-Vh-u63" secondAttribute="bottom" constant="10" id="MnY-Ho-Ru3"/>
-                    <constraint firstItem="5Cz-0I-x99" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Vas-LN-Zfu" secondAttribute="trailing" id="Nou-LL-7jZ"/>
+                    <constraint firstItem="5Cz-0I-x99" firstAttribute="trailing" secondItem="Vas-LN-Zfu" secondAttribute="trailing" id="Nou-LL-7jZ"/>
                     <constraint firstItem="Vas-LN-Zfu" firstAttribute="top" secondItem="5gk-oG-5Ac" secondAttribute="bottom" constant="10" id="S1e-Il-uyh"/>
                     <constraint firstAttribute="trailing" secondItem="cei-fy-Reg" secondAttribute="trailing" id="VWI-vX-fg6"/>
                     <constraint firstAttribute="trailing" secondItem="5gk-oG-5Ac" secondAttribute="trailing" constant="10" id="bdq-fF-pgv"/>
