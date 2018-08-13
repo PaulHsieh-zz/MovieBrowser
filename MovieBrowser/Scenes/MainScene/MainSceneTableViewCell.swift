@@ -22,8 +22,8 @@ class MainSceneTableViewCell: UITableViewCell {
     
     @IBOutlet weak private var movieOriginTitle: UILabel!
     @IBOutlet weak private var movieTitle: UILabel!
-    
     @IBOutlet weak private var movieDateLabel: UILabel!
+    @IBOutlet weak private var popularityLabel: UILabel!
     
     var viewModel: MainSceneTableViewCellModel =
         MainSceneTableViewCellModel(moviewOriginTitle: nil,
@@ -54,6 +54,7 @@ class MainSceneTableViewCell: UITableViewCell {
     private func setupUI() {
         movieOriginTitle.text = viewModel.moviewOriginTitle ?? "Unknown"
         movieTitle.text = viewModel.movieTitle ?? "Unknown"
+        popularityLabel.text = "\(viewModel.popularity!)" ?? "0.0"
         if let date = viewModel.movieDate, date != "" {
             movieDateLabel.text = "上映日期 : " + date
         }
