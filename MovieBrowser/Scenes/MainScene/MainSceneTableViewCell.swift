@@ -24,6 +24,7 @@ class MainSceneTableViewCell: UITableViewCell {
     @IBOutlet weak private var movieTitle: UILabel!
     @IBOutlet weak private var movieDateLabel: UILabel!
     @IBOutlet weak private var popularityLabel: UILabel!
+    @IBOutlet weak var noImageHintLabel: UILabel!
     
     var viewModel: MainSceneTableViewCellModel =
         MainSceneTableViewCellModel(moviewOriginTitle: nil,

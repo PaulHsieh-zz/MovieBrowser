@@ -45,6 +45,12 @@
                         <color key="textColor" red="0.80542630459999998" green="0.79661968949999995" blue="0.79846271189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="關注度 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3U-Vh-u63">
+                        <rect key="frame" x="141" y="171.5" width="54" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.80542630459999998" green="0.79661968949999995" blue="0.79846271189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cz-0I-x99">
                         <rect key="frame" x="205" y="133.5" width="122.5" height="55"/>
                         <subviews>
@@ -76,10 +82,10 @@
                             <constraint firstAttribute="height" constant="1" id="v0x-rm-YEm"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="關注度 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3U-Vh-u63">
-                        <rect key="frame" x="141" y="171.5" width="54" height="17"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                        <color key="textColor" red="0.80542630459999998" green="0.79661968949999995" blue="0.79846271189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ng-X3-Zta">
+                        <rect key="frame" x="30.5" y="90.5" width="74.5" height="18"/>
+                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -99,11 +105,13 @@
                     <constraint firstItem="Vas-LN-Zfu" firstAttribute="top" secondItem="5gk-oG-5Ac" secondAttribute="bottom" constant="10" id="S1e-Il-uyh"/>
                     <constraint firstAttribute="trailing" secondItem="cei-fy-Reg" secondAttribute="trailing" id="VWI-vX-fg6"/>
                     <constraint firstAttribute="trailing" secondItem="5gk-oG-5Ac" secondAttribute="trailing" constant="10" id="bdq-fF-pgv"/>
+                    <constraint firstItem="0ng-X3-Zta" firstAttribute="centerX" secondItem="QNe-QP-1Ea" secondAttribute="centerX" id="d3g-rn-9O2"/>
                     <constraint firstAttribute="trailing" secondItem="Vas-LN-Zfu" secondAttribute="trailing" constant="10" id="dA0-jh-6mt"/>
                     <constraint firstItem="cei-fy-Reg" firstAttribute="top" secondItem="QNe-QP-1Ea" secondAttribute="bottom" constant="4" id="fbm-KU-ntz"/>
                     <constraint firstItem="cei-fy-Reg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="imZ-i0-Wd3"/>
                     <constraint firstItem="Vas-LN-Zfu" firstAttribute="leading" secondItem="QNe-QP-1Ea" secondAttribute="trailing" constant="10" id="nsS-tS-1Q1"/>
                     <constraint firstItem="5Cz-0I-x99" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Vas-LN-Zfu" secondAttribute="bottom" constant="10" id="t5f-0Y-rIY"/>
+                    <constraint firstItem="0ng-X3-Zta" firstAttribute="centerY" secondItem="QNe-QP-1Ea" secondAttribute="centerY" id="uHv-mN-6gU"/>
                     <constraint firstItem="Vzb-f2-Dwe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="x8e-PZ-BNR"/>
                     <constraint firstItem="QNe-QP-1Ea" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="xuq-nA-Tya"/>
                 </constraints>
@@ -114,6 +122,7 @@
                 <outlet property="movieOriginTitle" destination="Vzb-f2-Dwe" id="H9p-C4-OOo"/>
                 <outlet property="moviePosterImageView" destination="QNe-QP-1Ea" id="7zD-u7-glk"/>
                 <outlet property="movieTitle" destination="5gk-oG-5Ac" id="FVK-5l-bbD"/>
+                <outlet property="noImageHintLabel" destination="0ng-X3-Zta" id="GAq-lW-crX"/>
                 <outlet property="popularityLabel" destination="D41-fH-Cr8" id="VSR-IC-wwM"/>
             </connections>
             <point key="canvasLocation" x="-36" y="74"/>

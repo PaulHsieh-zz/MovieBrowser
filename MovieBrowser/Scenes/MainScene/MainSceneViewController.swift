@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MainSceneViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -94,9 +95,22 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
                                                      popularity: dataModel.popularity)
         
         if dataModel.posterPath != "" {
-            cell.moviePosterImageView.sd_setImage(with: URL(string: Constant.imageBaseUrl + dataModel.posterPath)!, placeholderImage: UIImage())
+            cell.moviePosterImageView.sd_setImage(with: URL(string: Constant.imageBaseUrl + dataModel.posterPath)!,
+                                                  placeholderImage: UIImage(),
+                                                  options: SDWebImageOptions(rawValue: 0),
+                                                  completed:  {
+                                                    (image, error, cacheType, imageURL) in
+                                                    if error == nil {
+                                                        cell.noImageHintLabel.isHidden = true
+                                                    }
+                                                    else {
+                                                        cell.noImageHintLabel.isHidden = false
+                                                    }
+                                                  })
+
         }
         else {
+            cell.noImageHintLabel.isHidden = false
             cell.moviePosterImageView.image = UIImage()
         }
         
