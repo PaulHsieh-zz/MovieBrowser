@@ -54,7 +54,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cz-0I-x99">
                         <rect key="frame" x="205" y="133.5" width="122.5" height="55"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D41-fH-Cr8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="D41-fH-Cr8">
                                 <rect key="frame" x="6" y="6" width="110.5" height="43"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" red="0.0012984208029619415" green="1" blue="0.77317831189527331" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -123,6 +123,7 @@
                 <outlet property="moviePosterImageView" destination="QNe-QP-1Ea" id="7zD-u7-glk"/>
                 <outlet property="movieTitle" destination="5gk-oG-5Ac" id="FVK-5l-bbD"/>
                 <outlet property="noImageHintLabel" destination="0ng-X3-Zta" id="GAq-lW-crX"/>
+                <outlet property="popularityDescLabel" destination="b3U-Vh-u63" id="peb-ms-e9W"/>
                 <outlet property="popularityLabel" destination="D41-fH-Cr8" id="VSR-IC-wwM"/>
             </connections>
             <point key="canvasLocation" x="-36" y="74"/>

@@ -53,7 +53,7 @@ class NetworkManager {
                     guard let responseJson = json as? [String:AnyObject] else {
                         completionHandler(APIResponseModel(response: nil,
                                                            success: false,
-                                                           errorMessage: "CANNOT_CONVERT_TO_JSON",
+                                                           errorMessage: "CANNOT_CONVERT_TO_JSON".localized(),
                                                            error: nil))
                         return
                     }
@@ -68,14 +68,14 @@ class NetworkManager {
                         else {
                             completionHandler(APIResponseModel(response: nil,
                                                                success: false,
-                                                               errorMessage: "COMMON_NETWORK_ERROR",
+                                                               errorMessage: "COMMON_NETWORK_ERROR".localized(),
                                                                error: nil))
                         }
                     }
                     else {
                         completionHandler(APIResponseModel(response: nil,
                                                            success: false,
-                                                           errorMessage: "COMMON_NETWORK_ERROR",
+                                                           errorMessage: "COMMON_NETWORK_ERROR".localized(),
                                                            error: nil))
                     }
                     
@@ -83,7 +83,7 @@ class NetworkManager {
                 case .failure(let error):
                     completionHandler(APIResponseModel(response: nil,
                                                        success: false,
-                                                       errorMessage: "COMMON_NETWORK_ERROR",
+                                                       errorMessage: "COMMON_NETWORK_ERROR".localized(),
                                                        error: error as Error))
                     
                 } // end of response switch

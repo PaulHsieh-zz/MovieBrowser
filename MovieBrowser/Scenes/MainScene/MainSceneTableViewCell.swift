@@ -24,6 +24,7 @@ class MainSceneTableViewCell: UITableViewCell {
     @IBOutlet weak private var movieTitle: UILabel!
     @IBOutlet weak private var movieDateLabel: UILabel!
     @IBOutlet weak private var popularityLabel: UILabel!
+    @IBOutlet weak var popularityDescLabel: UILabel!
     @IBOutlet weak var noImageHintLabel: UILabel!
     
     var viewModel: MainSceneTableViewCellModel =
@@ -53,15 +54,34 @@ class MainSceneTableViewCell: UITableViewCell {
     }
  
     private func setupUI() {
-        movieOriginTitle.text = viewModel.moviewOriginTitle ?? "Unknown"
-        movieTitle.text = viewModel.movieTitle ?? "Unknown"
-        popularityLabel.text = "\(viewModel.popularity!)" ?? "0.0"
-        if let date = viewModel.movieDate, date != "" {
-            movieDateLabel.text = "上映日期 : " + date
+        if let originTitle = viewModel.moviewOriginTitle, originTitle != "" {
+            movieOriginTitle.text = originTitle
         }
         else {
-            movieDateLabel.text = "Unknown"
+            movieOriginTitle.text = "Unknown".localized()
         }
+
+        if let title = viewModel.movieTitle, title != "" {
+            movieTitle.text = title
+        }
+        else {
+            movieTitle.text = "Unknown".localized()
+        }
+
+        if let date = viewModel.movieDate, date != "" {
+            movieDateLabel.text = "\("Release Date".localized()) : \(date)"
+        }
+        else {
+            movieDateLabel.text = "Unknown".localized()
+        }
+
+        popularityDescLabel.text = "\("Popularity".localized()) : "
         
+        if let popularity = viewModel.popularity {
+            popularityLabel.text = "\(popularity)"
+        }
+        else {
+            popularityLabel.text = "0.0"
+        }
     }
 }
