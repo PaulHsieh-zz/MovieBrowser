@@ -14,7 +14,7 @@ enum DiscoverMovieSoryBy: String {
 }
 
 func MainListApiFeed(apiKey:String, page:Int, sortBy:DiscoverMovieSoryBy) -> [String:AnyObject] {
-    return ["api_key": apiKey, "page": page, "sortBy":sortBy.rawValue] as [String:AnyObject]
+    return ["api_key": apiKey, "page": page, "sort_by":sortBy.rawValue] as [String:AnyObject]
 }
 
 struct MainListResponseModel {
@@ -39,10 +39,10 @@ struct MainListDataModel {
     var date: String
     
     init(feed:[String:AnyObject]) {
-        self.posterPath = feed["poster_path"] as! String
-        self.popularity = feed["popularity"] as! Double
-        self.originalTitle = feed["original_title"] as! String
-        self.title = feed["title"] as! String
-        self.date = feed["release_date"] as! String
+        self.posterPath = feed["poster_path"] as? String ?? ""
+        self.popularity = feed["popularity"] as? Double ?? 0.0
+        self.originalTitle = feed["original_title"] as? String ?? ""
+        self.title = feed["title"] as? String ?? ""
+        self.date = feed["release_date"] as? String ?? ""
     }
 }
