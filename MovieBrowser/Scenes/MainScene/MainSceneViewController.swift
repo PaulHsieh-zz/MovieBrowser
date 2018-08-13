@@ -14,6 +14,15 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
     var currentPage:Int = 0
     var totalPages:Int = Int.max
     var sourceArray:[MainListDataModel] = []
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(self.pullToRefreshAction),
+                                 for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.lightGray
+        
+        return refreshControl
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +37,7 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
     func initTable() {
         let cellNib = UINib(nibName: "MainSceneTableViewCell", bundle: nil)
         listTableView.register(cellNib, forCellReuseIdentifier: MainSceneTableViewCell.cellIdentifier)
+        listTableView.refreshControl = refreshControl
     }
     
     func loadData() {
@@ -38,6 +48,7 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
             
             NetworkManager.Get.request(Name: .list, Parameter: feed, Path: nil) {
                 [weak self] responseModel in
+                self?.refreshControl.endRefreshing()
                 if let responseData = responseModel.response, responseModel.success == true {
                     let listModel = MainListResponseModel(feed: responseData)
                     self?.sourceArray.append(contentsOf:
@@ -55,6 +66,13 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
                 
             }
         }
+    }
+    
+    @objc func pullToRefreshAction() {
+        currentPage = 0
+        totalPages = Int.max
+        sourceArray.removeAll()
+        loadData()
     }
     
     // MARK:- UITableViewDataSource
