@@ -9,23 +9,28 @@
 import UIKit
 
 struct MainSceneTableViewCellModel {
-    var posterUrlString:String?
-    var movieMainLanguageTitle:String?
-    var movieEngTitle:String?
-    var movieDate:String?
+    var posterUrlString: String?
+    var moviewOriginTitle: String?
+    var movieTitle: String?
+    var movieDate: String?
+    var popularity: Double?
 }
 
 class MainSceneTableViewCell: UITableViewCell {
 
     @IBOutlet weak private var moviePosterImageView: UIImageView!
-    @IBOutlet weak private var movieMainLanguageLabel: UILabel!
-    @IBOutlet weak private var movieEngLabel: UILabel!
+    
+    @IBOutlet weak var movieOriginTitle: UILabel!
+    @IBOutlet weak var movieTitle: UILabel!
+    
     @IBOutlet weak private var movieDateLabel: UILabel!
     
-    var viewModel: MainSceneTableViewCellModel = MainSceneTableViewCellModel(posterUrlString: nil,
-                                                                             movieMainLanguageTitle: nil,
-                                                                             movieEngTitle: nil,
-                                                                             movieDate: nil) {
+    var viewModel: MainSceneTableViewCellModel =
+        MainSceneTableViewCellModel(posterUrlString: nil,
+                                    moviewOriginTitle: nil,
+                                    movieTitle: nil,
+                                    movieDate: nil,
+                                    popularity: nil) {
         didSet {
             setupUI()
         }
@@ -56,8 +61,8 @@ class MainSceneTableViewCell: UITableViewCell {
         }
         
         
-        movieMainLanguageLabel.text = viewModel.movieMainLanguageTitle ?? "Unknown"
-        movieEngLabel.text = viewModel.movieEngTitle ?? "Unknown"
+        movieOriginTitle.text = viewModel.moviewOriginTitle ?? "Unknown"
+        movieTitle.text = viewModel.movieTitle ?? "Unknown"
         movieDateLabel.text = viewModel.movieDate ?? "Unknown"
         
     }

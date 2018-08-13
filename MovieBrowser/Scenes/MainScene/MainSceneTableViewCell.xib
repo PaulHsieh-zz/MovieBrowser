@@ -76,9 +76,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="movieDateLabel" destination="Vas-LN-Zfu" id="osL-8R-CS8"/>
-                <outlet property="movieEngLabel" destination="5gk-oG-5Ac" id="9Hn-8n-HX0"/>
-                <outlet property="movieMainLanguageLabel" destination="Vzb-f2-Dwe" id="jl0-lP-wvv"/>
+                <outlet property="movieOriginTitle" destination="Vzb-f2-Dwe" id="H9p-C4-OOo"/>
                 <outlet property="moviePosterImageView" destination="QNe-QP-1Ea" id="7zD-u7-glk"/>
+                <outlet property="movieTitle" destination="5gk-oG-5Ac" id="FVK-5l-bbD"/>
             </connections>
             <point key="canvasLocation" x="-49.5" y="27"/>
         </tableViewCell>
