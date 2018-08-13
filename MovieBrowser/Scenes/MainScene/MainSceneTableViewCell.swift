@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import SDWebImage
 
 struct MainSceneTableViewCellModel {
-    var posterUrlString: String?
     var moviewOriginTitle: String?
     var movieTitle: String?
     var movieDate: String?
@@ -18,16 +18,15 @@ struct MainSceneTableViewCellModel {
 
 class MainSceneTableViewCell: UITableViewCell {
 
-    @IBOutlet weak private var moviePosterImageView: UIImageView!
+    @IBOutlet weak var moviePosterImageView: UIImageView!
     
-    @IBOutlet weak var movieOriginTitle: UILabel!
-    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak private var movieOriginTitle: UILabel!
+    @IBOutlet weak private var movieTitle: UILabel!
     
     @IBOutlet weak private var movieDateLabel: UILabel!
     
     var viewModel: MainSceneTableViewCellModel =
-        MainSceneTableViewCellModel(posterUrlString: nil,
-                                    moviewOriginTitle: nil,
+        MainSceneTableViewCellModel(moviewOriginTitle: nil,
                                     movieTitle: nil,
                                     movieDate: nil,
                                     popularity: nil) {
@@ -53,14 +52,6 @@ class MainSceneTableViewCell: UITableViewCell {
     }
  
     private func setupUI() {
-        if let posterUrlString = viewModel.posterUrlString {
-            moviePosterImageView.image = UIImage(named: posterUrlString)
-        }
-        else {
-            moviePosterImageView.image = UIImage(named: "img_placeholder")
-        }
-        
-        
         movieOriginTitle.text = viewModel.moviewOriginTitle ?? "Unknown"
         movieTitle.text = viewModel.movieTitle ?? "Unknown"
         movieDateLabel.text = viewModel.movieDate ?? "Unknown"

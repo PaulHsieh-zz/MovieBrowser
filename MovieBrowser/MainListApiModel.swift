@@ -30,3 +30,19 @@ struct MainListResponseModel {
         self.results = feed["results"] as! [[String:AnyObject]]
     }
 }
+
+struct MainListDataModel {
+    var posterPath: String
+    var popularity: Double
+    var originalTitle: String
+    var title: String
+    var date: String
+    
+    init(feed:[String:AnyObject]) {
+        self.posterPath = feed["poster_path"] as! String
+        self.popularity = feed["popularity"] as! Double
+        self.originalTitle = feed["original_title"] as! String
+        self.title = feed["title"] as! String
+        self.date = feed["release_date"] as! String
+    }
+}
