@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  MovieBrowser
+
+  Created by Paul Hsieh on 2018/8/14.
+  Copyright © 2018年 PaulHsieh. All rights reserved.
+*/
+
+"Unkonwn" = "未知" ;
+"Popularity" = "關注度" ;
+"Release Date" = "上映日期" ;
+
+// MARK:- Error
+"CANNOT_CONVERT_TO_JSON" = "不預期錯誤，請重新嘗試" ;
+"COMMON_NETWORK_ERROR" = "不預期錯誤，請重新嘗試" ;
