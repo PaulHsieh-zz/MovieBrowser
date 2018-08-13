@@ -54,7 +54,12 @@ class MainSceneTableViewCell: UITableViewCell {
     private func setupUI() {
         movieOriginTitle.text = viewModel.moviewOriginTitle ?? "Unknown"
         movieTitle.text = viewModel.movieTitle ?? "Unknown"
-        movieDateLabel.text = viewModel.movieDate ?? "Unknown"
+        if let date = viewModel.movieDate, date != "" {
+            movieDateLabel.text = "上映日期 : " + date
+        }
+        else {
+            movieDateLabel.text = "Unknown"
+        }
         
     }
 }
