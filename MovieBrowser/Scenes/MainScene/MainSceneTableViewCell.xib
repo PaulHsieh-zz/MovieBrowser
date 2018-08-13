@@ -119,9 +119,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="movieDateLabel" destination="Vas-LN-Zfu" id="osL-8R-CS8"/>
-                <outlet property="movieOriginTitle" destination="Vzb-f2-Dwe" id="H9p-C4-OOo"/>
+                <outlet property="movieOriginTitle" destination="5gk-oG-5Ac" id="3vV-s8-xMs"/>
                 <outlet property="moviePosterImageView" destination="QNe-QP-1Ea" id="7zD-u7-glk"/>
-                <outlet property="movieTitle" destination="5gk-oG-5Ac" id="FVK-5l-bbD"/>
+                <outlet property="movieTitle" destination="Vzb-f2-Dwe" id="tvj-ZE-eEH"/>
                 <outlet property="noImageHintLabel" destination="0ng-X3-Zta" id="GAq-lW-crX"/>
                 <outlet property="popularityDescLabel" destination="b3U-Vh-u63" id="peb-ms-e9W"/>
                 <outlet property="popularityLabel" destination="D41-fH-Cr8" id="VSR-IC-wwM"/>

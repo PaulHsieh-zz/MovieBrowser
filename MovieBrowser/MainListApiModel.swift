@@ -14,7 +14,7 @@ enum DiscoverMovieSoryBy: String {
 }
 
 func MainListApiFeed(apiKey:String, page:Int, sortBy:DiscoverMovieSoryBy) -> [String:AnyObject] {
-    return ["api_key": apiKey, "page": page, "sort_by":sortBy.rawValue] as [String:AnyObject]
+    return ["api_key": apiKey, "page": page, "sort_by":sortBy.rawValue, "language":Constant.languageCode] as [String:AnyObject]
 }
 
 struct MainListResponseModel {
