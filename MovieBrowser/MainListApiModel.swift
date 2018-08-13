@@ -13,8 +13,8 @@ enum DiscoverMovieSoryBy: String {
     case release_date_asc  = "release_date.asc"
 }
 
-func MainListApiFeed(apiKey:String, sortBy:DiscoverMovieSoryBy) -> [String:AnyObject] {
-    return ["api_key": apiKey, "sortBy":sortBy.rawValue] as [String:AnyObject]
+func MainListApiFeed(apiKey:String, page:Int, sortBy:DiscoverMovieSoryBy) -> [String:AnyObject] {
+    return ["api_key": apiKey, "page": page, "sortBy":sortBy.rawValue] as [String:AnyObject]
 }
 
 struct MainListResponseModel {
