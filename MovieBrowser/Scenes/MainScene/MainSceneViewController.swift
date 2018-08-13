@@ -114,7 +114,7 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
             cell.moviePosterImageView.image = UIImage()
         }
         
-
+        cell.selectionStyle = .none
 
         return cell
     }
