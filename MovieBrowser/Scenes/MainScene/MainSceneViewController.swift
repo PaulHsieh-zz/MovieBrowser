@@ -11,8 +11,10 @@ import UIKit
 class MainSceneViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var listTableView: UITableView!
-    var currentPage:Int = 0
-    var totalPages:Int = Int.max
+    var currentPage: Int = 0
+    var totalPages: Int = Int.max
+    var perPage: Int = 0
+    var isLoading: Bool = false
     var sourceArray:[MainListDataModel] = []
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -45,9 +47,10 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
             let feed = MainListApiFeed(apiKey: Constant.apiKey,
                                        page: currentPage + 1,
                                        sortBy: .release_date_desc)
-            
+            isLoading = true
             NetworkManager.Get.request(Name: .list, Parameter: feed, Path: nil) {
                 [weak self] responseModel in
+                self?.isLoading = false
                 self?.refreshControl.endRefreshing()
                 if let responseData = responseModel.response, responseModel.success == true {
                     let listModel = MainListResponseModel(feed: responseData)
@@ -57,6 +60,7 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
                     })
                     self?.currentPage = listModel.page
                     self?.totalPages = listModel.total_pages
+                    self?.perPage = listModel.results.count
                     self?.listTableView.reloadData()
                 }
                 else {
@@ -103,5 +107,12 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // pre loading
+        if (indexPath.row >= sourceArray.count - perPage / 2 && currentPage < totalPages) && !isLoading {
+            loadData()
+        }
     }
 }
