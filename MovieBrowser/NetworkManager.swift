@@ -8,10 +8,9 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
 
 struct APIResponseModel {
-    var response: [String:JSON]?
+    var response: [String:AnyObject]?
     var success: Bool
     var errorMessage: String?
     var error: Error?
@@ -27,8 +26,6 @@ class NetworkManager {
         let manager = Alamofire.SessionManager(configuration: configuration)
         return manager
     }()
-
-    static let apiBaseUrl = "http://api.themoviedb.org/3/"
     
     // MARK: - GET class
     class Get {
@@ -43,7 +40,7 @@ class NetworkManager {
                 apiPath = "discover/movie"
             }
             
-            return apiPath
+            return Constant.apiBaseUrl + apiPath
         }
         
         static func request(Name name:GetName, Parameter parameter:[String:AnyObject]?, Path path:String?, completionHandler: @escaping (APIResponseModel) -> ()) {
@@ -61,10 +58,9 @@ class NetworkManager {
                         return
                     }
                     
-                    let responseDic = JSON(responseJson)
-                    if let statusCode = responseDic["status"].int, let jsonValue = responseDic["data"].dictionary {
+                    if let statusCode = response.response?.statusCode {
                         if case 200..<300 = statusCode {
-                            completionHandler(APIResponseModel(response: jsonValue,
+                            completionHandler(APIResponseModel(response: responseJson,
                                                                success: true,
                                                                errorMessage: nil,
                                                                error: nil))
