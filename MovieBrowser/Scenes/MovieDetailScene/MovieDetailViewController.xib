@@ -14,7 +14,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="MovieBrowser" customModuleProvider="target">
             <connections>
                 <outlet property="moviePosterImageView" destination="iFZ-kQ-vuY" id="FL7-HC-cIX"/>
-                <outlet property="moviewDetailDescriptionVIew" destination="2dU-g0-8P3" id="whE-NK-yVl"/>
+                <outlet property="moviewDetailDescriptionVIew" destination="2dU-g0-8P3" id="7Gi-TV-7K4"/>
                 <outlet property="moviewDetailHeaderView" destination="iQc-sF-u3I" id="u38-ds-slb"/>
                 <outlet property="scrollContentVIew" destination="2zE-XK-HRl" id="RYa-0l-XCu"/>
                 <outlet property="scrollView" destination="zws-7x-D9G" id="hlX-aB-781"/>
@@ -42,18 +42,18 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxF-Ob-lNG">
                                     <rect key="frame" x="6" y="268.5" width="363" height="268"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iFZ-kQ-vuY">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1" translatesAutoresizingMaskIntoConstraints="NO" id="iFZ-kQ-vuY">
                                             <rect key="frame" x="0.0" y="0.0" width="178.5" height="268"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="iFZ-kQ-vuY" secondAttribute="height" multiplier="500:750" id="AO4-AI-5Wh"/>
                                             </constraints>
                                         </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dU-g0-8P3">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dU-g0-8P3" customClass="MoviewDetailDescriptionView" customModule="MovieBrowser" customModuleProvider="target">
                                             <rect key="frame" x="184.5" y="0.0" width="178.5" height="268"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="iFZ-kQ-vuY" secondAttribute="bottom" id="5NI-xj-cOh"/>
                                         <constraint firstItem="2dU-g0-8P3" firstAttribute="top" secondItem="yxF-Ob-lNG" secondAttribute="top" id="5mk-ab-WM2"/>
@@ -101,4 +101,7 @@
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="test1" width="500" height="750"/>
+    </resources>
 </document>

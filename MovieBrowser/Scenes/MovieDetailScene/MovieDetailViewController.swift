@@ -13,7 +13,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var scrollContentVIew: UIView!
     @IBOutlet weak var moviewDetailHeaderView: MovieDetailHeaderView!
     
-    @IBOutlet weak var moviewDetailDescriptionVIew: UIView!
+    @IBOutlet weak var moviewDetailDescriptionVIew: MoviewDetailDescriptionView!
     @IBOutlet weak var moviePosterImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()

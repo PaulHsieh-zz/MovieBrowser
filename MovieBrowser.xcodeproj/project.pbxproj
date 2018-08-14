@@ -30,6 +30,8 @@
 		AB935AFB21234CE400D29D56 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB935AF921234CE400D29D56 /* MovieDetailViewController.xib */; };
 		AB935AFD2123502500D29D56 /* MovieDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB935AFC2123502500D29D56 /* MovieDetailHeaderView.xib */; };
 		AB935AFF2123504300D29D56 /* MovieDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB935AFE2123504300D29D56 /* MovieDetailHeaderView.swift */; };
+		AB935B03212362B400D29D56 /* MoviewDetailDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB935B02212362B400D29D56 /* MoviewDetailDescriptionView.xib */; };
+		AB935B05212364F000D29D56 /* MoviewDetailDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB935B04212364F000D29D56 /* MoviewDetailDescriptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		AB935AF921234CE400D29D56 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
 		AB935AFC2123502500D29D56 /* MovieDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailHeaderView.xib; sourceTree = "<group>"; };
 		AB935AFE2123504300D29D56 /* MovieDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailHeaderView.swift; sourceTree = "<group>"; };
+		AB935B02212362B400D29D56 /* MoviewDetailDescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviewDetailDescriptionView.xib; sourceTree = "<group>"; };
+		AB935B04212364F000D29D56 /* MoviewDetailDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviewDetailDescriptionView.swift; sourceTree = "<group>"; };
 		C064AD2A6A286F803DD3B52B /* Pods-MovieBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieBrowser/Pods-MovieBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +200,8 @@
 				AB935AF921234CE400D29D56 /* MovieDetailViewController.xib */,
 				AB935AFE2123504300D29D56 /* MovieDetailHeaderView.swift */,
 				AB935AFC2123502500D29D56 /* MovieDetailHeaderView.xib */,
+				AB935B04212364F000D29D56 /* MoviewDetailDescriptionView.swift */,
+				AB935B02212362B400D29D56 /* MoviewDetailDescriptionView.xib */,
 			);
 			path = MovieDetailScene;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 				AB935AFD2123502500D29D56 /* MovieDetailHeaderView.xib in Resources */,
 				AB3CDF852120B9F700760410 /* LaunchScreen.storyboard in Resources */,
 				AB3043F02121FADE009FDFFC /* Localizable.strings in Resources */,
+				AB935B03212362B400D29D56 /* MoviewDetailDescriptionView.xib in Resources */,
 				AB3CDF822120B9F700760410 /* Assets.xcassets in Resources */,
 				AB3CDF8F2120BB0800760410 /* MainSceneViewController.xib in Resources */,
 				AB3CDF802120B9F400760410 /* Main.storyboard in Resources */,
@@ -347,6 +354,7 @@
 				AB3043F72121FB63009FDFFC /* StringExtension.swift in Sources */,
 				AB935AF4212294E300D29D56 /* UIColorExtension.swift in Sources */,
 				AB3CDF7B2120B9F400760410 /* AppDelegate.swift in Sources */,
+				AB935B05212364F000D29D56 /* MoviewDetailDescriptionView.swift in Sources */,
 				AB3CDF8E2120BB0800760410 /* MainSceneViewController.swift in Sources */,
 				AB935AFA21234CE400D29D56 /* MovieDetailViewController.swift in Sources */,
 				AB3043DF21219E94009FDFFC /* Constant.swift in Sources */,
