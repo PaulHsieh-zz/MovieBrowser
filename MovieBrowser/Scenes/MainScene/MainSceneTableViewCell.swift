@@ -69,7 +69,7 @@ class MainSceneTableViewCell: UITableViewCell {
         }
 
         if let date = viewModel.movieDate, date != "" {
-            movieDateLabel.text = "\("Release Date".localized()) : \(date)"
+            movieDateLabel.text = "\(date)"
         }
         else {
             movieDateLabel.text = "Unknown".localized()

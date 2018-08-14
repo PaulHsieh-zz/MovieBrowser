@@ -45,23 +45,23 @@
                         <color key="textColor" red="0.80542630459999998" green="0.79661968949999995" blue="0.79846271189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="關注度 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="b3U-Vh-u63">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="關注度 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="b3U-Vh-u63">
                         <rect key="frame" x="141" y="171.5" width="54" height="17"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" red="0.80542630459999998" green="0.79661968949999995" blue="0.79846271189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cz-0I-x99">
-                        <rect key="frame" x="253.5" y="133.5" width="122.5" height="55"/>
+                        <rect key="frame" x="205" y="134.5" width="171" height="54"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="10.999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="D41-fH-Cr8">
-                                <rect key="frame" x="6" y="6" width="110.5" height="43"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="36"/>
-                                <color key="textColor" red="0.0012984208029619415" green="1" blue="0.77317831189527331" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="10.999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="D41-fH-Cr8">
+                                <rect key="frame" x="6" y="6" width="159" height="42"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.29411764705882354" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="D41-fH-Cr8" firstAttribute="top" secondItem="5Cz-0I-x99" secondAttribute="top" constant="6" id="8xC-HG-wKf"/>
                             <constraint firstAttribute="trailing" secondItem="D41-fH-Cr8" secondAttribute="trailing" constant="6" id="QdG-YS-iMs"/>
@@ -83,8 +83,8 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ng-X3-Zta">
-                        <rect key="frame" x="30.5" y="90.5" width="74.5" height="18"/>
-                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                        <rect key="frame" x="33.5" y="91.5" width="68.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -97,7 +97,7 @@
                     <constraint firstItem="Vzb-f2-Dwe" firstAttribute="leading" secondItem="QNe-QP-1Ea" secondAttribute="trailing" constant="10" id="89b-bb-zQJ"/>
                     <constraint firstItem="5gk-oG-5Ac" firstAttribute="top" secondItem="Vzb-f2-Dwe" secondAttribute="bottom" constant="10" id="Akv-bb-1QO"/>
                     <constraint firstItem="cei-fy-Reg" firstAttribute="top" secondItem="5Cz-0I-x99" secondAttribute="bottom" constant="10" id="B0r-8O-FUh"/>
-                    <constraint firstItem="5Cz-0I-x99" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b3U-Vh-u63" secondAttribute="trailing" constant="10" id="BDV-cH-zfp"/>
+                    <constraint firstItem="5Cz-0I-x99" firstAttribute="leading" secondItem="b3U-Vh-u63" secondAttribute="trailing" constant="10" id="BDV-cH-zfp"/>
                     <constraint firstItem="b3U-Vh-u63" firstAttribute="leading" secondItem="Vas-LN-Zfu" secondAttribute="leading" id="IGu-uN-9p3"/>
                     <constraint firstItem="5gk-oG-5Ac" firstAttribute="leading" secondItem="QNe-QP-1Ea" secondAttribute="trailing" constant="10" id="K3o-f2-da3"/>
                     <constraint firstItem="cei-fy-Reg" firstAttribute="top" secondItem="b3U-Vh-u63" secondAttribute="bottom" constant="10" id="MnY-Ho-Ru3"/>

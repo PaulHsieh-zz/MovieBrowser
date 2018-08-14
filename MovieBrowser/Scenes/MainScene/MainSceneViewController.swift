@@ -29,6 +29,7 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Movie List".localized()
         self.view.backgroundColor = UIColor.mainDark
         initTable()
     }

@@ -9,6 +9,7 @@
 "Unkonwn" = "未知" ;
 "Popularity" = "關注度" ;
 "Release Date" = "上映日期" ;
+"Movie List" = "電影清單" ;
 
 // MARK:- Error
 "CANNOT_CONVERT_TO_JSON" = "不預期錯誤，請重新嘗試" ;

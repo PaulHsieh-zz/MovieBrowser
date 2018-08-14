@@ -9,6 +9,7 @@
 "Unkonwn" = "Unknown" ;
 "Popularity" = "Popularity" ;
 "Release Date" = "Date" ;
+"Movie List" = "Movie List" ;
 
 // MARK:- Error
 "CANNOT_CONVERT_TO_JSON" = "Please try again" ;
