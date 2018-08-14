@@ -24,6 +24,8 @@
 		AB3CDF982120CFBD00760410 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CDF972120CFBD00760410 /* NetworkManager.swift */; };
 		AB3CDF9A2120D22200760410 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3CDF992120D22200760410 /* Alamofire.framework */; };
 		AB3CDF9C2120D34E00760410 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3CDF9B2120D34E00760410 /* SwiftyJSON.framework */; };
+		AB935AF4212294E300D29D56 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB935AF3212294E300D29D56 /* UIColorExtension.swift */; };
+		AB935AF62122953100D29D56 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB935AF52122953100D29D56 /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		AB3CDF972120CFBD00760410 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AB3CDF992120D22200760410 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3CDF9B2120D34E00760410 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB935AF3212294E300D29D56 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		AB935AF52122953100D29D56 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		C064AD2A6A286F803DD3B52B /* Pods-MovieBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieBrowser/Pods-MovieBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				AB3043F62121FB63009FDFFC /* StringExtension.swift */,
+				AB935AF3212294E300D29D56 /* UIColorExtension.swift */,
+				AB935AF52122953100D29D56 /* UIImageExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -313,8 +319,10 @@
 				AB3CDF982120CFBD00760410 /* NetworkManager.swift in Sources */,
 				AB3043E221219F9A009FDFFC /* MainListApiModel.swift in Sources */,
 				AB3CDF7D2120B9F400760410 /* ViewController.swift in Sources */,
+				AB935AF62122953100D29D56 /* UIImageExtension.swift in Sources */,
 				AB3CDF942120BB6200760410 /* MainSceneTableViewCell.swift in Sources */,
 				AB3043F72121FB63009FDFFC /* StringExtension.swift in Sources */,
+				AB935AF4212294E300D29D56 /* UIColorExtension.swift in Sources */,
 				AB3CDF7B2120B9F400760410 /* AppDelegate.swift in Sources */,
 				AB3CDF8E2120BB0800760410 /* MainSceneViewController.swift in Sources */,
 				AB3043DF21219E94009FDFFC /* Constant.swift in Sources */,

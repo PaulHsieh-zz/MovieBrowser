@@ -17,8 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let vc = MainSceneViewController()
-        window?.rootViewController = vc
+        let navi = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navi
         window?.makeKeyAndVisible()
+
+        setNavigationBarAppearence()
         return true
     }
 
@@ -45,5 +48,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate {
+    func setNavigationBarAppearence() {
+        UINavigationBar.appearance().barTintColor = UIColor.mainDark
+        let textAttributes = [NSForegroundColorAttributeName:UIColor(white: 0.9, alpha: 0.9)]
+        UINavigationBar.appearance().titleTextAttributes = textAttributes
+        UINavigationBar.appearance().isOpaque = false
+        UINavigationBar.appearance().shadowImage = UIImage.imageWithColor(color: UIColor.clear)!.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch)
+        UINavigationBar.appearance().isTranslucent = false
+    }
 }
 

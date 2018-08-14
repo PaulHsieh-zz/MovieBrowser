@@ -22,13 +22,14 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
         refreshControl.addTarget(self, action:
             #selector(self.pullToRefreshAction),
                                  for: UIControlEvents.valueChanged)
-        refreshControl.tintColor = UIColor.lightGray
+        refreshControl.tintColor = UIColor(white: 0.9, alpha: 0.9)
         
         return refreshControl
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.mainDark
         initTable()
     }
     
@@ -41,6 +42,7 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
         let cellNib = UINib(nibName: "MainSceneTableViewCell", bundle: nil)
         listTableView.register(cellNib, forCellReuseIdentifier: MainSceneTableViewCell.cellIdentifier)
         listTableView.refreshControl = refreshControl
+        listTableView.backgroundColor = UIColor.mainDark
     }
     
     func loadData() {
