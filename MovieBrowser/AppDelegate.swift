@@ -53,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     func setNavigationBarAppearence() {
         UINavigationBar.appearance().barTintColor = UIColor.mainDark
+        UINavigationBar.appearance().tintColor = UIColor(white: 0.9, alpha: 0.9)
         let textAttributes = [NSForegroundColorAttributeName:UIColor(white: 0.9, alpha: 0.9)]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         UINavigationBar.appearance().isOpaque = false

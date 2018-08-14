@@ -15,4 +15,5 @@ extension UIColor {
     }
     
     static let mainDark = UIColor.colorWith(Red: 37, Green: 37, Blue: 37, Alpha: 1)
+    static let mainWhite = UIColor.colorWith(Red: 205, Green: 203, Blue: 204, Alpha: 1)
 }
