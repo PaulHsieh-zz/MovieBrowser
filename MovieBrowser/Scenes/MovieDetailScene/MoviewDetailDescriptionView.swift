@@ -15,9 +15,19 @@ class MoviewDetailDescriptionView: UIView {
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var languageDetailLabel: UILabel!
     
-    @IBOutlet weak var synposisLabel: UILabel!
-    @IBOutlet weak var synposisDetailTextView: UITextView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var dateDetailLabel: UILabel!
+    @IBOutlet weak var runtimeLabel: UILabel!
+    @IBOutlet weak var runtimeDetailLabel: UILabel!
     
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var statusDetailLabel: UILabel!
+    
+    var viewModel: MoviewDetailDescriptionViewModel! {
+        didSet {
+            self.setupUI()
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,6 +48,12 @@ class MoviewDetailDescriptionView: UIView {
         ]
         view.backgroundColor = UIColor.mainDark
         addSubview(view)
+        
+        genresDetailLabel.text = ""
+        languageDetailLabel.text = ""
+        dateDetailLabel.text = ""
+        runtimeDetailLabel.text = ""
+        statusDetailLabel.text = ""
     }
     
     func loadViewFromNib() -> UIView {
@@ -46,6 +62,26 @@ class MoviewDetailDescriptionView: UIView {
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         
         return view
+    }
+    
+    private func setupUI() {
+        if viewModel.genres.count > 0 {
+            genresDetailLabel.text = viewModel.genres.joined(separator: ",")
+        }
+        else {
+            genresDetailLabel.text = "Unknown".localized()
+        }
+        
+        if viewModel.language.count > 0 {
+            languageDetailLabel.text = viewModel.language
+        }
+        else {
+            languageDetailLabel.text = "Unknown".localized()
+        }
+        
+        dateDetailLabel.text = viewModel.date == "" ? "Unknown".localized() : viewModel.date
+        runtimeDetailLabel.text = viewModel.runtime == 0 ? "Unknown".localized() : String(viewModel.runtime)
+        statusDetailLabel.text = viewModel.status == "" ? "Unknown".localized() : viewModel.status
     }
 
 }

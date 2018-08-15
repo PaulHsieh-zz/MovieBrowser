@@ -37,12 +37,14 @@ struct MainListDataModel {
     var originalTitle: String
     var title: String
     var date: String
+    var movieId: Int
     
-    init(feed:[String:AnyObject]) {
+    init(feed: [String:AnyObject]) {
         self.posterPath = feed["poster_path"] as? String ?? ""
         self.popularity = feed["popularity"] as? Double ?? 0.0
         self.originalTitle = feed["original_title"] as? String ?? ""
         self.title = feed["title"] as? String ?? ""
         self.date = feed["release_date"] as? String ?? ""
+        self.movieId = feed["id"] as? Int ?? 0
     }
 }

@@ -16,9 +16,14 @@ class MovieDetailHeaderView: UIView {
     @IBOutlet weak var posterAlphaCoverView: UIView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieOriginTitle: UILabel!
-    @IBOutlet weak var movieDateLabel: UILabel!
-    @IBOutlet weak var movieDurationLabel: UILabel!
     @IBOutlet weak var bookingButton: UIButton!
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    
+    var viewModel:MovieDetailHeaderViewModel! {
+        didSet {
+            self.setupUI()
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,6 +44,17 @@ class MovieDetailHeaderView: UIView {
         ]
         view.backgroundColor = UIColor.mainDark
         addSubview(view)
+        
+        posterImageView.image = UIImage()
+        movieTitle.text = ""
+        movieOriginTitle.text = ""
+        bookingButton.layer.masksToBounds = true
+        bookingButton.layer.cornerRadius = 6
+        bookingButton.layer.borderWidth = 1
+        bookingButton.layer.borderColor = UIColor.mainWhite.cgColor
+        blurView.layer.masksToBounds = true
+        blurView.layer.cornerRadius = 6
+
     }
     
     func loadViewFromNib() -> UIView {
@@ -49,4 +65,16 @@ class MovieDetailHeaderView: UIView {
         return view
     }
 
+    private func setupUI() {
+        movieTitle.text = viewModel.title
+        movieOriginTitle.text = viewModel.originalTitle
+        
+        if viewModel.posterPath != "" {
+            posterImageView.sd_setImage(with: URL(string: Constant.imageBaseUrl + viewModel.posterPath)!,
+                                        placeholderImage: UIImage())
+        }
+        else {
+            posterImageView.image = UIImage()
+        }
+    }
 }

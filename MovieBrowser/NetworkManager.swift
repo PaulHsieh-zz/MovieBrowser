@@ -31,6 +31,7 @@ class NetworkManager {
     class Get {
         public enum GetName:String {
             case list
+            case movieDetail
         }
         
         private static func urlParser(name:GetName, path:String?) -> String {
@@ -38,6 +39,13 @@ class NetworkManager {
             switch name {
             case .list:
                 apiPath = "discover/movie"
+            case .movieDetail:
+                if let pathValue = path {
+                    apiPath = "movie/\(pathValue)"
+                }
+                else {
+                    apiPath = "movie/1"
+                }
             }
             
             return Constant.apiBaseUrl + apiPath

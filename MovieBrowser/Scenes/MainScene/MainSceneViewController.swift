@@ -132,4 +132,10 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
             loadData()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieData = sourceArray[indexPath.row]
+        let detailVC = MovieDetailViewController(movieId: movieData.movieId)
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
 }

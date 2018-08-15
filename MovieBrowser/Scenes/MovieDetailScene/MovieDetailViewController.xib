@@ -13,9 +13,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="MovieBrowser" customModuleProvider="target">
             <connections>
+                <outlet property="movieDetailDescriptionView" destination="2dU-g0-8P3" id="75x-TV-Xek"/>
                 <outlet property="moviePosterImageView" destination="iFZ-kQ-vuY" id="FL7-HC-cIX"/>
-                <outlet property="moviewDetailDescriptionVIew" destination="2dU-g0-8P3" id="7Gi-TV-7K4"/>
                 <outlet property="moviewDetailHeaderView" destination="iQc-sF-u3I" id="u38-ds-slb"/>
+                <outlet property="noImageHintLabel" destination="Jq5-ZA-Rf1" id="0eJ-CS-gNP"/>
                 <outlet property="scrollContentVIew" destination="2zE-XK-HRl" id="RYa-0l-XCu"/>
                 <outlet property="scrollView" destination="zws-7x-D9G" id="hlX-aB-781"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -42,12 +43,18 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxF-Ob-lNG">
                                     <rect key="frame" x="6" y="268.5" width="363" height="268"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1" translatesAutoresizingMaskIntoConstraints="NO" id="iFZ-kQ-vuY">
+                                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1" translatesAutoresizingMaskIntoConstraints="NO" id="iFZ-kQ-vuY">
                                             <rect key="frame" x="0.0" y="0.0" width="178.5" height="268"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="iFZ-kQ-vuY" secondAttribute="height" multiplier="500:750" id="AO4-AI-5Wh"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jq5-ZA-Rf1">
+                                            <rect key="frame" x="48.5" y="123.5" width="81.5" height="21"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dU-g0-8P3" customClass="MoviewDetailDescriptionView" customModule="MovieBrowser" customModuleProvider="target">
                                             <rect key="frame" x="184.5" y="0.0" width="178.5" height="268"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,9 +67,11 @@
                                         <constraint firstItem="2dU-g0-8P3" firstAttribute="leading" secondItem="iFZ-kQ-vuY" secondAttribute="trailing" constant="6" id="6c1-tl-iAc"/>
                                         <constraint firstAttribute="trailing" secondItem="2dU-g0-8P3" secondAttribute="trailing" id="LB3-o5-MY7"/>
                                         <constraint firstAttribute="bottom" secondItem="2dU-g0-8P3" secondAttribute="bottom" id="ORD-Jf-MbU"/>
+                                        <constraint firstItem="Jq5-ZA-Rf1" firstAttribute="centerY" secondItem="iFZ-kQ-vuY" secondAttribute="centerY" id="Tr8-XI-EcF"/>
                                         <constraint firstItem="iFZ-kQ-vuY" firstAttribute="top" secondItem="yxF-Ob-lNG" secondAttribute="top" id="V3c-V9-6BQ"/>
                                         <constraint firstItem="2dU-g0-8P3" firstAttribute="width" secondItem="iFZ-kQ-vuY" secondAttribute="width" id="Vde-WJ-Sn0"/>
                                         <constraint firstItem="iFZ-kQ-vuY" firstAttribute="leading" secondItem="yxF-Ob-lNG" secondAttribute="leading" id="dIn-ar-eId"/>
+                                        <constraint firstItem="Jq5-ZA-Rf1" firstAttribute="centerX" secondItem="iFZ-kQ-vuY" secondAttribute="centerX" id="itg-jo-cWF"/>
                                         <constraint firstItem="2dU-g0-8P3" firstAttribute="height" secondItem="iFZ-kQ-vuY" secondAttribute="height" id="ybf-kj-JtW"/>
                                     </constraints>
                                 </view>
