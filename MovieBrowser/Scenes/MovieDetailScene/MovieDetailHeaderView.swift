@@ -76,6 +76,8 @@ class MovieDetailHeaderView: UIView {
         movieOriginTitle.text = viewModel.originalTitle
         popularityLabel.text = "Popularity".localized() + " : "
         popularityDetailLabel.text = String(viewModel.popularity)
+        bookingButton.isEnabled = true
+        
         // backdrop > poster > none
         if viewModel.backdropPath != "" {
             posterImageView.sd_setImage(with: URL(string: Constant.imageBaseUrl + viewModel.backdropPath)!,

@@ -50,7 +50,7 @@
                                     <color key="textColor" red="0.88235294117647056" green="0.87450980392156863" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ds-ox-q96">
+                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ds-ox-q96">
                                     <rect key="frame" x="10" y="545" width="355" height="35"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="dY3-gh-5yU"/>
@@ -58,9 +58,6 @@
                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                     <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <state key="normal" title="Synposis" image="icon_arrow_down"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="onClickSynopsis:" destination="-1" eventType="touchUpInside" id="HWq-8n-8qx"/>
                                     </connections>

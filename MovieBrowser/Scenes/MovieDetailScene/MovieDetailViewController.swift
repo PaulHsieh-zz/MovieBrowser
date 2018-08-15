@@ -38,6 +38,11 @@ class MovieDetailViewController: UIViewController {
         loadData()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        SVProgressHUD.dismiss()
+    }
+    
     init(movieId:Int) {
         self.movieId = movieId
         super.init(nibName: nil, bundle: nil)
@@ -78,6 +83,7 @@ class MovieDetailViewController: UIViewController {
         
         synopsisLabel.text = viewModel.synopsis == "" ? "None".localized() : viewModel.synopsis
         synopsisButton.setTitle("Synopsis".localized(), for: .normal)
+        synopsisButton.isEnabled = true
         synopsisButton.layer.masksToBounds = true
         synopsisButton.layer.cornerRadius = 6
         synopsisButton.layer.borderWidth = 1
