@@ -14,9 +14,17 @@
 "Booking" = "預約電影" ;
 "Genres" = "電影風格" ;
 "Language" = "電影語言" ;
-"runtime" = "電影片長" ;
-"status" = "上映狀態" ;
+"Runtime" = "電影片長" ;
+"Status" = "上映狀態" ;
 "Synopsis" = "電影大綱" ;
+"None" = "暫無資訊" ;
+
+"Rumored" = "未上映" ;
+"Planned" = "未上映" ;
+"In Production" = "未上映" ;
+"Post Production" = "未上映" ;
+"Released" = "上映中" ;
+"Canceled" = "未上映" ;
 
 // MARK:- Error
 "CANNOT_CONVERT_TO_JSON" = "不預期錯誤，請重新嘗試" ;

@@ -55,9 +55,9 @@ class MoviewDetailDescriptionView: UIView {
         languageDetailLabel.text = ""
         dateLabel.text = "Release Date".localized()
         dateDetailLabel.text = ""
-        runtimeLabel.text = "runtime".localized()
+        runtimeLabel.text = "Runtime".localized()
         runtimeDetailLabel.text = ""
-        statusLabel.text = "status".localized()
+        statusLabel.text = "Status".localized()
         statusDetailLabel.text = ""
     }
     
@@ -86,7 +86,7 @@ class MoviewDetailDescriptionView: UIView {
         
         dateDetailLabel.text = viewModel.date == "" ? "Unknown".localized() : viewModel.date
         runtimeDetailLabel.text = viewModel.runtime == 0 ? "Unknown".localized() : String(viewModel.runtime)
-        statusDetailLabel.text = viewModel.status == "" ? "Unknown".localized() : viewModel.status
+        statusDetailLabel.text = viewModel.status == "" ? "Unknown".localized() : viewModel.status.localized()
     }
 
 }

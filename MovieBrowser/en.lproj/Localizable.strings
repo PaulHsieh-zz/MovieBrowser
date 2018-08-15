@@ -17,6 +17,14 @@
 "Runtime" = "Runtime" ;
 "Status" = "Status" ;
 "Synopsis" = "Synopsis" ;
+"None" = "None" ;
+
+"Rumored" = "Not Released" ;
+"Planned" = "Not Released" ;
+"In Production" = "Not Released" ;
+"Post Production" = "Not Released" ;
+"Released" = "Released" ;
+"Canceled" = "Not Released" ;
 
 // MARK:- Error
 "CANNOT_CONVERT_TO_JSON" = "Please try again" ;

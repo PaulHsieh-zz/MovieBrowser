@@ -44,23 +44,44 @@
                                         <constraint firstAttribute="width" secondItem="iQc-sF-u3I" secondAttribute="height" multiplier="500:350" id="zOh-Z1-OQ6"/>
                                     </constraints>
                                 </view>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdd-kq-Uxz">
+                                    <rect key="frame" x="14" y="514" width="347" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                    <color key="textColor" red="0.88235294117647056" green="0.87450980392156863" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ds-ox-q96">
+                                    <rect key="frame" x="10" y="545" width="355" height="35"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="dY3-gh-5yU"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                    <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Synposis" image="icon_arrow_down"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onClickSynopsis:" destination="-1" eventType="touchUpInside" id="HWq-8n-8qx"/>
+                                    </connections>
+                                </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxF-Ob-lNG">
-                                    <rect key="frame" x="6" y="268.5" width="363" height="268"/>
+                                    <rect key="frame" x="10" y="268.5" width="355" height="262"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1" translatesAutoresizingMaskIntoConstraints="NO" id="iFZ-kQ-vuY">
-                                            <rect key="frame" x="0.0" y="0.0" width="178.5" height="268"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="174.5" height="262"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="iFZ-kQ-vuY" secondAttribute="height" multiplier="500:750" id="AO4-AI-5Wh"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jq5-ZA-Rf1">
-                                            <rect key="frame" x="48.5" y="123.5" width="81.5" height="21"/>
+                                            <rect key="frame" x="46.5" y="120.5" width="81.5" height="21"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dU-g0-8P3" customClass="MoviewDetailDescriptionView" customModule="MovieBrowser" customModuleProvider="target">
-                                            <rect key="frame" x="184.5" y="0.0" width="178.5" height="268"/>
+                                            <rect key="frame" x="180.5" y="0.0" width="174.5" height="262"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                     </subviews>
@@ -79,44 +100,23 @@
                                         <constraint firstItem="2dU-g0-8P3" firstAttribute="height" secondItem="iFZ-kQ-vuY" secondAttribute="height" id="ybf-kj-JtW"/>
                                     </constraints>
                                 </view>
-                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdd-kq-Uxz">
-                                    <rect key="frame" x="6" y="520" width="363" height="16.5"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                    <color key="textColor" red="0.88235294117647056" green="0.87450980392156863" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ds-ox-q96">
-                                    <rect key="frame" x="10" y="551.5" width="355" height="35"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="35" id="dY3-gh-5yU"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
-                                    <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    <state key="normal" title="Synposis" image="icon_arrow_down"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="onClickSynopsis:" destination="-1" eventType="touchUpInside" id="HWq-8n-8qx"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
-                                <constraint firstItem="yxF-Ob-lNG" firstAttribute="leading" secondItem="2zE-XK-HRl" secondAttribute="leading" constant="6" id="4t0-Eg-rIh"/>
+                                <constraint firstItem="yxF-Ob-lNG" firstAttribute="leading" secondItem="2zE-XK-HRl" secondAttribute="leading" constant="10" id="4t0-Eg-rIh"/>
+                                <constraint firstItem="Xdd-kq-Uxz" firstAttribute="trailing" secondItem="yxF-Ob-lNG" secondAttribute="trailing" constant="-4" id="5tM-N5-a6W"/>
                                 <constraint firstItem="9ds-ox-q96" firstAttribute="top" secondItem="iFZ-kQ-vuY" secondAttribute="bottom" constant="15" id="BaF-El-Rsp"/>
-                                <constraint firstItem="Xdd-kq-Uxz" firstAttribute="leading" secondItem="iFZ-kQ-vuY" secondAttribute="leading" id="DLo-Ct-c0e"/>
+                                <constraint firstItem="Xdd-kq-Uxz" firstAttribute="leading" secondItem="iFZ-kQ-vuY" secondAttribute="leading" constant="4" id="DLo-Ct-c0e"/>
                                 <constraint firstItem="9ds-ox-q96" firstAttribute="leading" secondItem="2zE-XK-HRl" secondAttribute="leading" constant="10" id="IGd-ST-sKR"/>
                                 <constraint firstItem="yxF-Ob-lNG" firstAttribute="top" secondItem="iQc-sF-u3I" secondAttribute="bottom" constant="6" id="KC8-8Q-NxV"/>
                                 <constraint firstItem="9ds-ox-q96" firstAttribute="top" secondItem="Xdd-kq-Uxz" secondAttribute="bottom" constant="15" id="Y9k-bR-cS8"/>
-                                <constraint firstItem="Xdd-kq-Uxz" firstAttribute="trailing" secondItem="2dU-g0-8P3" secondAttribute="trailing" id="bKb-1D-g62"/>
                                 <constraint firstItem="Xdd-kq-Uxz" firstAttribute="top" secondItem="iFZ-kQ-vuY" secondAttribute="bottom" priority="749" constant="15" id="d9y-j4-1sM"/>
                                 <constraint firstAttribute="trailing" secondItem="iQc-sF-u3I" secondAttribute="trailing" id="egX-tr-GE1"/>
                                 <constraint firstItem="iQc-sF-u3I" firstAttribute="leading" secondItem="2zE-XK-HRl" secondAttribute="leading" id="fSN-3f-Z5d"/>
-                                <constraint firstAttribute="trailing" secondItem="yxF-Ob-lNG" secondAttribute="trailing" constant="6" id="fr5-d6-PJ6"/>
+                                <constraint firstAttribute="trailing" secondItem="yxF-Ob-lNG" secondAttribute="trailing" constant="10" id="fr5-d6-PJ6"/>
                                 <constraint firstItem="iQc-sF-u3I" firstAttribute="top" secondItem="2zE-XK-HRl" secondAttribute="top" id="qHb-Ff-BUQ"/>
                                 <constraint firstAttribute="trailing" secondItem="9ds-ox-q96" secondAttribute="trailing" constant="10" id="vqg-SF-Fm3"/>
-                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9ds-ox-q96" secondAttribute="bottom" constant="10" id="ymO-Zd-AgY"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9ds-ox-q96" secondAttribute="bottom" constant="30" id="ymO-Zd-AgY"/>
                             </constraints>
                         </view>
                     </subviews>
