@@ -9,7 +9,13 @@
 import Foundation
 
 extension String {
-    func localized() -> String {
-        return NSLocalizedString(self, comment: "")
+    func localized(tableName: String? = nil) -> String {
+        if let name = tableName {
+            return NSLocalizedString(self, tableName: name, bundle: Bundle.main, value: "", comment: "")
+        }
+        else {
+            return NSLocalizedString(self, comment: "")
+        }
     }
+    
 }

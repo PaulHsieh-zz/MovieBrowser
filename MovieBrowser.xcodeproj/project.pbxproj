@@ -35,6 +35,7 @@
 		AB935B0721236A5900D29D56 /* MovieDetailApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB935B0621236A5900D29D56 /* MovieDetailApiModel.swift */; };
 		AB935B0B2123C8BC00D29D56 /* MovieBookingWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB935B092123C8BC00D29D56 /* MovieBookingWebViewController.swift */; };
 		AB935B0C2123C8BC00D29D56 /* MovieBookingWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB935B0A2123C8BC00D29D56 /* MovieBookingWebViewController.xib */; };
+		AB935B0F2123DA7D00D29D56 /* LanguageLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB935B112123DA7D00D29D56 /* LanguageLocalizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,8 @@
 		AB935B0621236A5900D29D56 /* MovieDetailApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailApiModel.swift; sourceTree = "<group>"; };
 		AB935B092123C8BC00D29D56 /* MovieBookingWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBookingWebViewController.swift; sourceTree = "<group>"; };
 		AB935B0A2123C8BC00D29D56 /* MovieBookingWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieBookingWebViewController.xib; sourceTree = "<group>"; };
+		AB935B102123DA7D00D29D56 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LanguageLocalizable.strings"; sourceTree = "<group>"; };
+		AB935B122123DA8000D29D56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LanguageLocalizable.strings; sourceTree = "<group>"; };
 		C064AD2A6A286F803DD3B52B /* Pods-MovieBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieBrowser/Pods-MovieBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				AB3043F22121FADE009FDFFC /* Localizable.strings */,
+				AB935B112123DA7D00D29D56 /* LanguageLocalizable.strings */,
 			);
 			name = Localizable;
 			sourceTree = "<group>";
@@ -285,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB935B0F2123DA7D00D29D56 /* LanguageLocalizable.strings in Resources */,
 				AB935AFB21234CE400D29D56 /* MovieDetailViewController.xib in Resources */,
 				AB935AFD2123502500D29D56 /* MovieDetailHeaderView.xib in Resources */,
 				AB935B0C2123C8BC00D29D56 /* MovieBookingWebViewController.xib in Resources */,
@@ -409,6 +414,15 @@
 				AB3043EC2121FAAC009FDFFC /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AB935B112123DA7D00D29D56 /* LanguageLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB935B102123DA7D00D29D56 /* zh-Hant */,
+				AB935B122123DA8000D29D56 /* en */,
+			);
+			name = LanguageLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

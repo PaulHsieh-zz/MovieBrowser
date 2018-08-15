@@ -78,7 +78,7 @@ class MoviewDetailDescriptionView: UIView {
         }
         
         if viewModel.language.count > 0 {
-            languageDetailLabel.text = viewModel.language
+            languageDetailLabel.text = viewModel.language.localized(tableName: "LanguageLocalizable")
         }
         else {
             languageDetailLabel.text = "Unknown".localized()
