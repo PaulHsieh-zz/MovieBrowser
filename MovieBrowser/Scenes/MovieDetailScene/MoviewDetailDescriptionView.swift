@@ -49,10 +49,15 @@ class MoviewDetailDescriptionView: UIView {
         view.backgroundColor = UIColor.mainDark
         addSubview(view)
         
+        genresLabel.text = "Genres".localized()
         genresDetailLabel.text = ""
+        languageLabel.text = "Language".localized()
         languageDetailLabel.text = ""
+        dateLabel.text = "Release Date".localized()
         dateDetailLabel.text = ""
+        runtimeLabel.text = "runtime".localized()
         runtimeDetailLabel.text = ""
+        statusLabel.text = "status".localized()
         statusDetailLabel.text = ""
     }
     

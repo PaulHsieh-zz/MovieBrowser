@@ -74,6 +74,7 @@ class MovieDetailViewController: UIViewController {
         }
         
         synopsisLabel.text = viewModel.synopsis
+        synopsisButton.setTitle("Synopsis".localized(), for: .normal)
         synopsisButton.isEnabled = viewModel.synopsis == "" ? false : true
         synopsisButton.layer.masksToBounds = true
         synopsisButton.layer.cornerRadius = 6

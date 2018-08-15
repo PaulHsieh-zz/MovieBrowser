@@ -53,6 +53,7 @@ class MovieDetailHeaderView: UIView {
         bookingButton.layer.cornerRadius = 6
         bookingButton.layer.borderWidth = 1
         bookingButton.layer.borderColor = UIColor.mainWhite.cgColor
+        bookingButton.setTitle("Booking".localized(), for: .normal)
         blurView.layer.masksToBounds = true
         blurView.layer.cornerRadius = 6
 

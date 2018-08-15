@@ -6,10 +6,17 @@
   Copyright © 2018年 PaulHsieh. All rights reserved.
 */
 
-"Unkonwn" = "未知" ;
+"Unknown" = "未知" ;
 "Popularity" = "關注度" ;
 "Release Date" = "上映日期" ;
 "Movie List" = "電影清單" ;
+
+"Booking" = "預約電影" ;
+"Genres" = "電影風格" ;
+"Language" = "電影語言" ;
+"runtime" = "電影片長" ;
+"status" = "上映狀態" ;
+"Synopsis" = "電影大綱" ;
 
 // MARK:- Error
 "CANNOT_CONVERT_TO_JSON" = "不預期錯誤，請重新嘗試" ;
