@@ -24,6 +24,7 @@ struct MovieDetailResponseModel {
     var backdropPath: String
     var genres: [String]
     var synopsis: String
+    var popularity: Double
     
     init(feed: [String:AnyObject]) {
         self.releaseDate = feed["release_date"] as? String ?? ""
@@ -37,6 +38,7 @@ struct MovieDetailResponseModel {
         self.backdropPath = feed["backdropPath"] as? String ?? ""
         self.genres = feed["genres"] as? [String] ?? []
         self.synopsis = feed["overview"] as? String ?? ""
+        self.popularity = feed["popularity"] as? Double ?? 0.0
     }
 }
 
@@ -47,14 +49,16 @@ struct MovieDetailHeaderViewModel {
     var runtime: Int
     var posterPath: String
     var backdropPath: String
+    var popularity: Double
     
-    init(title: String, originalTitle: String, releaseDate :String, runtime: Int, posterPath: String, backdropPath: String) {
+    init(title: String, originalTitle: String, releaseDate :String, runtime: Int, posterPath: String, backdropPath: String, popularity: Double) {
         self.title = title
         self.originalTitle = originalTitle
         self.releaseDate = releaseDate
         self.runtime = runtime
         self.posterPath = posterPath
         self.backdropPath = backdropPath
+        self.popularity = popularity
     }
 }
 

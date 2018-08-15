@@ -16,6 +16,8 @@ class MovieDetailHeaderView: UIView {
     @IBOutlet weak var posterAlphaCoverView: UIView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieOriginTitle: UILabel!
+    @IBOutlet weak var popularityLabel: UILabel!
+    @IBOutlet weak var popularityDetailLabel: UILabel!
     @IBOutlet weak var bookingButton: UIButton!
     @IBOutlet weak var blurView: UIVisualEffectView!
     var viewModel:MovieDetailHeaderViewModel! {
@@ -49,6 +51,8 @@ class MovieDetailHeaderView: UIView {
         posterImageView.image = UIImage()
         movieTitle.text = ""
         movieOriginTitle.text = ""
+        popularityLabel.text = ""
+        popularityDetailLabel.text = ""
         bookingButton.layer.masksToBounds = true
         bookingButton.layer.cornerRadius = 6
         bookingButton.layer.borderWidth = 1
@@ -70,7 +74,8 @@ class MovieDetailHeaderView: UIView {
     private func setupUI() {
         movieTitle.text = viewModel.title
         movieOriginTitle.text = viewModel.originalTitle
-        
+        popularityLabel.text = "Popularity".localized() + " : "
+        popularityDetailLabel.text = String(viewModel.popularity)
         // backdrop > poster > none
         if viewModel.backdropPath != "" {
             posterImageView.sd_setImage(with: URL(string: Constant.imageBaseUrl + viewModel.backdropPath)!,

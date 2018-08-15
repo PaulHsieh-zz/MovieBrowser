@@ -85,7 +85,8 @@ class MovieDetailViewController: UIViewController {
                                                                       releaseDate: viewModel.releaseDate,
                                                                       runtime: viewModel.runtime,
                                                                       posterPath: viewModel.posterPath,
-                                                                      backdropPath: viewModel.backdropPath)
+                                                                      backdropPath: viewModel.backdropPath,
+                                                                      popularity: viewModel.popularity)
         moviewDetailHeaderView.bookMovie(handler: self.onClickBookMovie)
         
         movieDetailDescriptionView.viewModel = MoviewDetailDescriptionViewModel(genres: viewModel.genres,
