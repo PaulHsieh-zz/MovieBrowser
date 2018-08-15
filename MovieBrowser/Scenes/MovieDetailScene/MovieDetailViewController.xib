@@ -13,12 +13,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="MovieBrowser" customModuleProvider="target">
             <connections>
+                <outlet property="hideSynopsisConstraint" destination="BaF-El-Rsp" id="V0L-G4-Xg4"/>
                 <outlet property="movieDetailDescriptionView" destination="2dU-g0-8P3" id="75x-TV-Xek"/>
                 <outlet property="moviePosterImageView" destination="iFZ-kQ-vuY" id="FL7-HC-cIX"/>
                 <outlet property="moviewDetailHeaderView" destination="iQc-sF-u3I" id="u38-ds-slb"/>
                 <outlet property="noImageHintLabel" destination="Jq5-ZA-Rf1" id="0eJ-CS-gNP"/>
                 <outlet property="scrollContentVIew" destination="2zE-XK-HRl" id="RYa-0l-XCu"/>
                 <outlet property="scrollView" destination="zws-7x-D9G" id="hlX-aB-781"/>
+                <outlet property="showSynopsisConstraint" destination="d9y-j4-1sM" id="Kuy-rt-mqu"/>
+                <outlet property="synopsisButton" destination="9ds-ox-q96" id="KyJ-Rt-Dvm"/>
+                <outlet property="synopsisLabel" destination="Xdd-kq-Uxz" id="RS6-zo-iEW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -75,20 +79,47 @@
                                         <constraint firstItem="2dU-g0-8P3" firstAttribute="height" secondItem="iFZ-kQ-vuY" secondAttribute="height" id="ybf-kj-JtW"/>
                                     </constraints>
                                 </view>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdd-kq-Uxz">
+                                    <rect key="frame" x="6" y="520" width="363" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                    <color key="textColor" red="0.88235294117647056" green="0.87450980392156863" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ds-ox-q96">
+                                    <rect key="frame" x="10" y="551.5" width="355" height="35"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="dY3-gh-5yU"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                    <state key="normal" title="Synposis"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onClickSynopsis:" destination="-1" eventType="touchUpInside" id="HWq-8n-8qx"/>
+                                    </connections>
+                                </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstItem="yxF-Ob-lNG" firstAttribute="leading" secondItem="2zE-XK-HRl" secondAttribute="leading" constant="6" id="4t0-Eg-rIh"/>
+                                <constraint firstItem="9ds-ox-q96" firstAttribute="top" secondItem="iFZ-kQ-vuY" secondAttribute="bottom" constant="15" id="BaF-El-Rsp"/>
+                                <constraint firstItem="Xdd-kq-Uxz" firstAttribute="leading" secondItem="iFZ-kQ-vuY" secondAttribute="leading" id="DLo-Ct-c0e"/>
+                                <constraint firstItem="9ds-ox-q96" firstAttribute="leading" secondItem="2zE-XK-HRl" secondAttribute="leading" constant="10" id="IGd-ST-sKR"/>
                                 <constraint firstItem="yxF-Ob-lNG" firstAttribute="top" secondItem="iQc-sF-u3I" secondAttribute="bottom" constant="6" id="KC8-8Q-NxV"/>
+                                <constraint firstItem="9ds-ox-q96" firstAttribute="top" secondItem="Xdd-kq-Uxz" secondAttribute="bottom" constant="15" id="Y9k-bR-cS8"/>
+                                <constraint firstItem="Xdd-kq-Uxz" firstAttribute="trailing" secondItem="2dU-g0-8P3" secondAttribute="trailing" id="bKb-1D-g62"/>
+                                <constraint firstItem="Xdd-kq-Uxz" firstAttribute="top" secondItem="iFZ-kQ-vuY" secondAttribute="bottom" priority="749" constant="15" id="d9y-j4-1sM"/>
                                 <constraint firstAttribute="trailing" secondItem="iQc-sF-u3I" secondAttribute="trailing" id="egX-tr-GE1"/>
                                 <constraint firstItem="iQc-sF-u3I" firstAttribute="leading" secondItem="2zE-XK-HRl" secondAttribute="leading" id="fSN-3f-Z5d"/>
                                 <constraint firstAttribute="trailing" secondItem="yxF-Ob-lNG" secondAttribute="trailing" constant="6" id="fr5-d6-PJ6"/>
                                 <constraint firstItem="iQc-sF-u3I" firstAttribute="top" secondItem="2zE-XK-HRl" secondAttribute="top" id="qHb-Ff-BUQ"/>
-                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yxF-Ob-lNG" secondAttribute="bottom" constant="10" id="sFI-gn-aT3"/>
+                                <constraint firstAttribute="trailing" secondItem="9ds-ox-q96" secondAttribute="trailing" constant="10" id="vqg-SF-Fm3"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9ds-ox-q96" secondAttribute="bottom" constant="10" id="ymO-Zd-AgY"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.25012414230000002" blue="0.1768403995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="2zE-XK-HRl" firstAttribute="leading" secondItem="zws-7x-D9G" secondAttribute="leading" id="EYp-mv-mVy"/>
                         <constraint firstAttribute="bottom" secondItem="2zE-XK-HRl" secondAttribute="bottom" id="sfm-CP-mxX"/>
@@ -97,7 +128,7 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="zws-7x-D9G" secondAttribute="trailing" id="80O-Wu-Yq1"/>
                 <constraint firstItem="2zE-XK-HRl" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Bz5-TQ-ZY5"/>

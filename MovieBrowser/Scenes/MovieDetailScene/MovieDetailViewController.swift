@@ -15,8 +15,14 @@ class MovieDetailViewController: UIViewController {
     
     @IBOutlet weak var movieDetailDescriptionView: MoviewDetailDescriptionView!
     @IBOutlet weak var moviePosterImageView: UIImageView!
-    
     @IBOutlet weak var noImageHintLabel: UILabel!
+    
+    @IBOutlet weak var synopsisLabel: UILabel!
+    @IBOutlet weak var synopsisButton: UIButton!
+    
+    @IBOutlet var showSynopsisConstraint: NSLayoutConstraint!
+    @IBOutlet var hideSynopsisConstraint: NSLayoutConstraint!
+    
     var movieId:Int = 0
     var viewModel:MovieDetailResponseModel!
     
@@ -39,7 +45,6 @@ class MovieDetailViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
     
     func loadData() {
         let feed = MovieDetailApiFeed(apiKey: Constant.apiKey)
@@ -67,6 +72,14 @@ class MovieDetailViewController: UIViewController {
             noImageHintLabel.isHidden = false
             moviePosterImageView.image = UIImage()
         }
+        
+        synopsisLabel.text = viewModel.synopsis
+        synopsisButton.isEnabled = viewModel.synopsis == "" ? false : true
+        synopsisButton.layer.masksToBounds = true
+        synopsisButton.layer.cornerRadius = 6
+        synopsisButton.layer.borderWidth = 1
+        synopsisButton.layer.borderColor = UIColor.mainWhite.cgColor
+        
         moviewDetailHeaderView.viewModel = MovieDetailHeaderViewModel(title: viewModel.title,
                                                                       originalTitle: viewModel.originalTitle,
                                                                       releaseDate: viewModel.releaseDate,
@@ -78,6 +91,29 @@ class MovieDetailViewController: UIViewController {
                                                                                 date: viewModel.releaseDate,
                                                                                 runtime: viewModel.runtime,
                                                                                 status: viewModel.status)
+    }
+    
+    @IBAction func onClickSynopsis(_ sender: Any) {
+        if synopsisButton.isSelected {
+            synopsisButton.isSelected = false
+            hideSynopsisConstraint.isActive = true
+            showSynopsisConstraint.isActive = false
+            UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut, animations: {
+                self.synopsisLabel.alpha = 0
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+            
+        }
+        else {
+            synopsisButton.isSelected = true
+            synopsisLabel.isHidden = false
+            hideSynopsisConstraint.isActive = false
+            showSynopsisConstraint.isActive = true
+            UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut, animations: {
+                self.synopsisLabel.alpha = 1
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+        }
     }
     
 }

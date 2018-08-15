@@ -22,6 +22,7 @@ struct MovieDetailResponseModel {
     var status: String
     var posterPath: String
     var genres: [String]
+    var synopsis: String
     
     init(feed: [String:AnyObject]) {
         self.releaseDate = feed["release_date"] as? String ?? ""
@@ -33,6 +34,7 @@ struct MovieDetailResponseModel {
         self.status = feed["status"] as? String ?? ""
         self.posterPath = feed["poster_path"] as? String ?? ""
         self.genres = feed["genres"] as? [String] ?? []
+        self.synopsis = feed["overview"] as? String ?? ""
     }
 }
 
