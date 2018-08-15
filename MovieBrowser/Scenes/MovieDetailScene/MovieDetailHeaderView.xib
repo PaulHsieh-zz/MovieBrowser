@@ -41,6 +41,12 @@
                     <color key="textColor" red="0.88235294117647056" green="0.87450980392156863" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ds-xY-8jI" userLabel="Origin title">
+                    <rect key="frame" x="15" y="57" width="80" height="15.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <color key="textColor" red="0.80392156859999997" green="0.79607843140000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="關注度 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bhh-48-a6Z">
                     <rect key="frame" x="10" y="609" width="42.5" height="13"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
@@ -51,12 +57,6 @@
                     <rect key="frame" x="10" y="624" width="59" height="35"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                     <color key="textColor" red="0.88235294119999996" green="0.87450980389999999" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ds-xY-8jI" userLabel="Origin title">
-                    <rect key="frame" x="15" y="57.5" width="24.5" height="15.5"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                    <color key="textColor" red="0.80392156859999997" green="0.79607843140000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zan-pN-ZYj">
@@ -85,8 +85,10 @@
                 <constraint firstItem="Bhh-48-a6Z" firstAttribute="leading" secondItem="q43-pV-nNW" secondAttribute="leading" id="3zT-jF-uRq"/>
                 <constraint firstItem="Zan-pN-ZYj" firstAttribute="height" secondItem="CvL-2t-p3r" secondAttribute="height" id="5pZ-BE-7gU"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="jQP-Xf-eOk" secondAttribute="bottom" id="7cq-Ln-1eu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ccC-j8-4zP" secondAttribute="trailing" constant="15" id="99N-yk-WDu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jQP-Xf-eOk" secondAttribute="trailing" id="9TD-Fd-Oi1"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CvL-2t-p3r" secondAttribute="bottom" constant="10" id="AsD-tp-7hG"/>
+                <constraint firstItem="3ds-xY-8jI" firstAttribute="trailing" secondItem="ccC-j8-4zP" secondAttribute="trailing" id="B6X-dG-i2Q"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CvL-2t-p3r" secondAttribute="trailing" constant="10" id="EiH-f7-Kg2"/>
                 <constraint firstItem="jQP-Xf-eOk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="FeJ-c4-yFF"/>
                 <constraint firstItem="q43-pV-nNW" firstAttribute="top" secondItem="Bhh-48-a6Z" secondAttribute="bottom" constant="2" id="Kj4-tX-X6W"/>
