@@ -24,10 +24,10 @@ struct MainListResponseModel {
     var results: [[String:AnyObject]]
     
     init(feed:[String:AnyObject]) {
-        self.page = feed["page"] as! Int
-        self.total_results = feed["total_results"] as! Int
-        self.total_pages = feed["total_pages"] as! Int
-        self.results = feed["results"] as! [[String:AnyObject]]
+        self.page = feed["page"] as? Int ?? 0
+        self.total_results = feed["total_results"] as? Int ?? 0
+        self.total_pages = feed["total_pages"] as? Int ?? 0
+        self.results = feed["results"] as? [[String:AnyObject]] ?? []
     }
 }
 
