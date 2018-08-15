@@ -24,6 +24,8 @@
 		AB3CDF982120CFBD00760410 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CDF972120CFBD00760410 /* NetworkManager.swift */; };
 		AB3CDF9A2120D22200760410 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3CDF992120D22200760410 /* Alamofire.framework */; };
 		AB3CDF9C2120D34E00760410 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3CDF9B2120D34E00760410 /* SwiftyJSON.framework */; };
+		AB80B9472123FEE20024ADD6 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB80B9462123FEE20024ADD6 /* SDWebImage.framework */; };
+		AB80B9492123FEE20024ADD6 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB80B9482123FEE20024ADD6 /* SVProgressHUD.framework */; };
 		AB935AF4212294E300D29D56 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB935AF3212294E300D29D56 /* UIColorExtension.swift */; };
 		AB935AF62122953100D29D56 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB935AF52122953100D29D56 /* UIImageExtension.swift */; };
 		AB935AFA21234CE400D29D56 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB935AF821234CE400D29D56 /* MovieDetailViewController.swift */; };
@@ -62,6 +64,8 @@
 		AB3CDF972120CFBD00760410 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AB3CDF992120D22200760410 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3CDF9B2120D34E00760410 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB80B9462123FEE20024ADD6 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB80B9482123FEE20024ADD6 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB935AF3212294E300D29D56 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		AB935AF52122953100D29D56 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		AB935AF821234CE400D29D56 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB80B9472123FEE20024ADD6 /* SDWebImage.framework in Frameworks */,
+				AB80B9492123FEE20024ADD6 /* SVProgressHUD.framework in Frameworks */,
 				AB3CDF9C2120D34E00760410 /* SwiftyJSON.framework in Frameworks */,
 				AB3CDF9A2120D22200760410 /* Alamofire.framework in Frameworks */,
 				59828CF36197FE5010BADED3 /* Pods_MovieBrowser.framework in Frameworks */,
@@ -104,6 +110,8 @@
 		939163341B0A793E638046AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB80B9462123FEE20024ADD6 /* SDWebImage.framework */,
+				AB80B9482123FEE20024ADD6 /* SVProgressHUD.framework */,
 				AB3CDF9B2120D34E00760410 /* SwiftyJSON.framework */,
 				AB3CDF992120D22200760410 /* Alamofire.framework */,
 				676856CC148098F2AFC49CDC /* Pods_MovieBrowser.framework */,
@@ -315,12 +323,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MovieBrowser/Pods-MovieBrowser-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

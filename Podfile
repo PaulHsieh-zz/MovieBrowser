@@ -13,5 +13,6 @@ target 'MovieBrowser' do
 
   # Tools
   pod 'SDWebImage', '~>3.7'
+  pod 'SVProgressHUD'
 
 end

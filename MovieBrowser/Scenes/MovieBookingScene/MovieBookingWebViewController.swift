@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import SVProgressHUD
 
 class MovieBookingWebViewController: UIViewController, WKNavigationDelegate {
 
@@ -17,6 +18,12 @@ class MovieBookingWebViewController: UIViewController, WKNavigationDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setWebView()
+        SVProgressHUD.show()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        SVProgressHUD.dismiss()
     }
     
     func setWebView () {
@@ -40,4 +47,18 @@ class MovieBookingWebViewController: UIViewController, WKNavigationDelegate {
         webView.trailingAnchor.constraint(equalTo: webViewContainer.trailingAnchor, constant: 0).isActive = true
     }
 
+    
+    // MARK:- WKWebViewDelegate
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        SVProgressHUD.dismiss()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        SVProgressHUD.dismiss()
+    }
+    
+    func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
+        SVProgressHUD.dismiss()
+    }
 }

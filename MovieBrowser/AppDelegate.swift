@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         setNavigationBarAppearence()
+        progressHUDSetting()
         return true
     }
 
@@ -59,6 +61,12 @@ extension AppDelegate {
         UINavigationBar.appearance().isOpaque = false
         UINavigationBar.appearance().shadowImage = UIImage.imageWithColor(color: UIColor.clear)!.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch)
         UINavigationBar.appearance().isTranslucent = false
+    }
+    
+    func progressHUDSetting() {
+        SVProgressHUD.setDefaultMaskType(.none)
+        SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.setOffsetFromCenter(UIOffset.zero)
     }
 }
 

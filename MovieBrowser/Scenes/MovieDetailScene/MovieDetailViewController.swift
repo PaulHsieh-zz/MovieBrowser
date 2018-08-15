@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class MovieDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
@@ -47,9 +48,11 @@ class MovieDetailViewController: UIViewController {
     }
     
     func loadData() {
+        SVProgressHUD.show()
         let feed = MovieDetailApiFeed(apiKey: Constant.apiKey)
         NetworkManager.Get.request(Name: .movieDetail, Parameter: feed, Path: String(movieId)) {
             [weak self] responseModel in
+            SVProgressHUD.dismiss()
             if let responseData = responseModel.response, responseModel.success == true {
                 self?.viewModel = MovieDetailResponseModel(feed: responseData)
                 self?.setupUI()
