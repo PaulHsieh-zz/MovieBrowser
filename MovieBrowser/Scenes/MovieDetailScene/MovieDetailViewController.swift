@@ -106,6 +106,7 @@ class MovieDetailViewController: UIViewController {
             hideSynopsisConstraint.isActive = true
             showSynopsisConstraint.isActive = false
             UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut, animations: {
+                self.synopsisButton.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(0))
                 self.synopsisLabel.alpha = 0
                 self.view.layoutIfNeeded()
             }, completion: nil)
@@ -117,6 +118,7 @@ class MovieDetailViewController: UIViewController {
             hideSynopsisConstraint.isActive = false
             showSynopsisConstraint.isActive = true
             UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut, animations: {
+                self.synopsisButton.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
                 self.synopsisLabel.alpha = 1
                 self.view.layoutIfNeeded()
             }, completion: nil)
