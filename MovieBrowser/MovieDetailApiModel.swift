@@ -21,6 +21,7 @@ struct MovieDetailResponseModel {
     var originalLanguage: String
     var status: String
     var posterPath: String
+    var backdropPath: String
     var genres: [String]
     var synopsis: String
     
@@ -33,6 +34,7 @@ struct MovieDetailResponseModel {
         self.originalLanguage = feed["original_language"] as? String ?? ""
         self.status = feed["status"] as? String ?? ""
         self.posterPath = feed["poster_path"] as? String ?? ""
+        self.backdropPath = feed["backdropPath"] as? String ?? ""
         self.genres = feed["genres"] as? [String] ?? []
         self.synopsis = feed["overview"] as? String ?? ""
     }
@@ -44,13 +46,15 @@ struct MovieDetailHeaderViewModel {
     var releaseDate: String
     var runtime: Int
     var posterPath: String
+    var backdropPath: String
     
-    init(title: String, originalTitle: String, releaseDate :String, runtime: Int, posterPath: String) {
+    init(title: String, originalTitle: String, releaseDate :String, runtime: Int, posterPath: String, backdropPath: String) {
         self.title = title
         self.originalTitle = originalTitle
         self.releaseDate = releaseDate
         self.runtime = runtime
         self.posterPath = posterPath
+        self.backdropPath = backdropPath
     }
 }
 

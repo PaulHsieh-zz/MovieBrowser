@@ -71,7 +71,12 @@ class MovieDetailHeaderView: UIView {
         movieTitle.text = viewModel.title
         movieOriginTitle.text = viewModel.originalTitle
         
-        if viewModel.posterPath != "" {
+        // backdrop > poster > none
+        if viewModel.backdropPath != "" {
+            posterImageView.sd_setImage(with: URL(string: Constant.imageBaseUrl + viewModel.backdropPath)!,
+                                        placeholderImage: UIImage())
+        }
+        else if viewModel.posterPath != "" {
             posterImageView.sd_setImage(with: URL(string: Constant.imageBaseUrl + viewModel.posterPath)!,
                                         placeholderImage: UIImage())
         }
