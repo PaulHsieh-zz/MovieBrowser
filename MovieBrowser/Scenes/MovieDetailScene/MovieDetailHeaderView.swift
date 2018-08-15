@@ -18,13 +18,14 @@ class MovieDetailHeaderView: UIView {
     @IBOutlet weak var movieOriginTitle: UILabel!
     @IBOutlet weak var bookingButton: UIButton!
     @IBOutlet weak var blurView: UIVisualEffectView!
-    
     var viewModel:MovieDetailHeaderViewModel! {
         didSet {
             self.setupUI()
         }
     }
     
+    var bookMovie: () -> Void = { _ in }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -76,5 +77,13 @@ class MovieDetailHeaderView: UIView {
         else {
             posterImageView.image = UIImage()
         }
+    }
+    
+    @IBAction func onClickBooking(_ sender: Any) {
+        self.bookMovie()
+    }
+    
+    public func bookMovie( handler: @escaping () -> Void ) {
+        self.bookMovie = handler
     }
 }

@@ -33,6 +33,8 @@
 		AB935B03212362B400D29D56 /* MoviewDetailDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB935B02212362B400D29D56 /* MoviewDetailDescriptionView.xib */; };
 		AB935B05212364F000D29D56 /* MoviewDetailDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB935B04212364F000D29D56 /* MoviewDetailDescriptionView.swift */; };
 		AB935B0721236A5900D29D56 /* MovieDetailApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB935B0621236A5900D29D56 /* MovieDetailApiModel.swift */; };
+		AB935B0B2123C8BC00D29D56 /* MovieBookingWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB935B092123C8BC00D29D56 /* MovieBookingWebViewController.swift */; };
+		AB935B0C2123C8BC00D29D56 /* MovieBookingWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB935B0A2123C8BC00D29D56 /* MovieBookingWebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		AB935B02212362B400D29D56 /* MoviewDetailDescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviewDetailDescriptionView.xib; sourceTree = "<group>"; };
 		AB935B04212364F000D29D56 /* MoviewDetailDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviewDetailDescriptionView.swift; sourceTree = "<group>"; };
 		AB935B0621236A5900D29D56 /* MovieDetailApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailApiModel.swift; sourceTree = "<group>"; };
+		AB935B092123C8BC00D29D56 /* MovieBookingWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBookingWebViewController.swift; sourceTree = "<group>"; };
+		AB935B0A2123C8BC00D29D56 /* MovieBookingWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieBookingWebViewController.xib; sourceTree = "<group>"; };
 		C064AD2A6A286F803DD3B52B /* Pods-MovieBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieBrowser/Pods-MovieBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +185,7 @@
 		AB3CDF912120BB2100760410 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AB935B082123C88500D29D56 /* MovieBookingScene */,
 				AB935AF721234C7800D29D56 /* MovieDetailScene */,
 				AB3CDF902120BB1200760410 /* MainScene */,
 			);
@@ -207,6 +212,15 @@
 				AB935B02212362B400D29D56 /* MoviewDetailDescriptionView.xib */,
 			);
 			path = MovieDetailScene;
+			sourceTree = "<group>";
+		};
+		AB935B082123C88500D29D56 /* MovieBookingScene */ = {
+			isa = PBXGroup;
+			children = (
+				AB935B092123C8BC00D29D56 /* MovieBookingWebViewController.swift */,
+				AB935B0A2123C8BC00D29D56 /* MovieBookingWebViewController.xib */,
+			);
+			path = MovieBookingScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +287,7 @@
 			files = (
 				AB935AFB21234CE400D29D56 /* MovieDetailViewController.xib in Resources */,
 				AB935AFD2123502500D29D56 /* MovieDetailHeaderView.xib in Resources */,
+				AB935B0C2123C8BC00D29D56 /* MovieBookingWebViewController.xib in Resources */,
 				AB3CDF852120B9F700760410 /* LaunchScreen.storyboard in Resources */,
 				AB3043F02121FADE009FDFFC /* Localizable.strings in Resources */,
 				AB935B03212362B400D29D56 /* MoviewDetailDescriptionView.xib in Resources */,
@@ -349,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB3CDF982120CFBD00760410 /* NetworkManager.swift in Sources */,
+				AB935B0B2123C8BC00D29D56 /* MovieBookingWebViewController.swift in Sources */,
 				AB3043E221219F9A009FDFFC /* MainListApiModel.swift in Sources */,
 				AB3CDF7D2120B9F400760410 /* ViewController.swift in Sources */,
 				AB935AF62122953100D29D56 /* UIImageExtension.swift in Sources */,

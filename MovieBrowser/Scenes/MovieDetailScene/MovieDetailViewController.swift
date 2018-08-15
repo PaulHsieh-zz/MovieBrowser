@@ -85,12 +85,18 @@ class MovieDetailViewController: UIViewController {
                                                                       releaseDate: viewModel.releaseDate,
                                                                       runtime: viewModel.runtime,
                                                                       posterPath: viewModel.posterPath)
+        moviewDetailHeaderView.bookMovie(handler: self.onClickBookMovie)
         
         movieDetailDescriptionView.viewModel = MoviewDetailDescriptionViewModel(genres: viewModel.genres,
                                                                                 language: viewModel.originalLanguage,
                                                                                 date: viewModel.releaseDate,
                                                                                 runtime: viewModel.runtime,
                                                                                 status: viewModel.status)
+    }
+    
+    func onClickBookMovie() {
+        let webVC = MovieBookingWebViewController()
+        self.navigationController?.pushViewController(webVC, animated: true)
     }
     
     @IBAction func onClickSynopsis(_ sender: Any) {
