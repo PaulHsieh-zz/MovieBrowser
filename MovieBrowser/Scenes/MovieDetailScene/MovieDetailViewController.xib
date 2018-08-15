@@ -68,7 +68,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxF-Ob-lNG">
                                     <rect key="frame" x="10" y="268.5" width="355" height="262"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1" translatesAutoresizingMaskIntoConstraints="NO" id="iFZ-kQ-vuY">
+                                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iFZ-kQ-vuY">
                                             <rect key="frame" x="0.0" y="0.0" width="174.5" height="262"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="iFZ-kQ-vuY" secondAttribute="height" multiplier="500:750" id="AO4-AI-5Wh"/>
@@ -144,6 +144,5 @@
     </objects>
     <resources>
         <image name="icon_arrow_down" width="25" height="25"/>
-        <image name="test1" width="500" height="750"/>
     </resources>
 </document>

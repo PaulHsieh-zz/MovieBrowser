@@ -26,7 +26,7 @@
             <rect key="frame" x="0.0" y="0.0" width="997" height="714"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1" translatesAutoresizingMaskIntoConstraints="NO" id="jQP-Xf-eOk">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jQP-Xf-eOk">
                     <rect key="frame" x="0.0" y="20" width="997" height="694"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7O-SR-bQ1">
@@ -97,7 +97,4 @@
             <point key="canvasLocation" x="-3" y="-131"/>
         </view>
     </objects>
-    <resources>
-        <image name="test1" width="500" height="750"/>
-    </resources>
 </document>
