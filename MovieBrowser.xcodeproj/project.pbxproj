@@ -13,7 +13,6 @@
 		AB3043F02121FADE009FDFFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB3043F22121FADE009FDFFC /* Localizable.strings */; };
 		AB3043F72121FB63009FDFFC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3043F62121FB63009FDFFC /* StringExtension.swift */; };
 		AB3CDF7B2120B9F400760410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CDF7A2120B9F400760410 /* AppDelegate.swift */; };
-		AB3CDF7D2120B9F400760410 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CDF7C2120B9F400760410 /* ViewController.swift */; };
 		AB3CDF802120B9F400760410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3CDF7E2120B9F400760410 /* Main.storyboard */; };
 		AB3CDF822120B9F700760410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3CDF812120B9F700760410 /* Assets.xcassets */; };
 		AB3CDF852120B9F700760410 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3CDF832120B9F700760410 /* LaunchScreen.storyboard */; };
@@ -52,7 +51,6 @@
 		AB3043F62121FB63009FDFFC /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		AB3CDF772120B9F400760410 /* MovieBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3CDF7A2120B9F400760410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB3CDF7C2120B9F400760410 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB3CDF7F2120B9F400760410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB3CDF812120B9F700760410 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB3CDF842120B9F700760410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 				AB3043E021219F89009FDFFC /* Models */,
 				AB3CDF962120CF9B00760410 /* Utilities */,
 				AB3CDF7A2120B9F400760410 /* AppDelegate.swift */,
-				AB3CDF7C2120B9F400760410 /* ViewController.swift */,
 				AB3CDF7E2120B9F400760410 /* Main.storyboard */,
 				AB3CDF812120B9F700760410 /* Assets.xcassets */,
 				AB3CDF832120B9F700760410 /* LaunchScreen.storyboard */,
@@ -381,7 +378,6 @@
 				AB3CDF982120CFBD00760410 /* NetworkManager.swift in Sources */,
 				AB935B0B2123C8BC00D29D56 /* MovieBookingWebViewController.swift in Sources */,
 				AB3043E221219F9A009FDFFC /* MainListApiModel.swift in Sources */,
-				AB3CDF7D2120B9F400760410 /* ViewController.swift in Sources */,
 				AB935AF62122953100D29D56 /* UIImageExtension.swift in Sources */,
 				AB3CDF942120BB6200760410 /* MainSceneTableViewCell.swift in Sources */,
 				AB935AFF2123504300D29D56 /* MovieDetailHeaderView.swift in Sources */,

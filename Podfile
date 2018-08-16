@@ -9,7 +9,6 @@ target 'MovieBrowser' do
 
   # API
   pod 'Alamofire', '~> 4.5'
-  pod 'SwiftyJSON', '4.0.0'
 
   # Tools
   pod 'SDWebImage', '~>3.7'
