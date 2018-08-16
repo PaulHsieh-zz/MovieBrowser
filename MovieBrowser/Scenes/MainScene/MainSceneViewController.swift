@@ -112,6 +112,20 @@ class MainSceneViewController: UIViewController, UITableViewDelegate, UITableVie
                                                   })
 
         }
+        else if dataModel.backdropPath != "" {
+            cell.moviePosterImageView.sd_setImage(with: URL(string: Constant.imageBaseUrl + dataModel.backdropPath)!,
+                                                  placeholderImage: UIImage(),
+                                                  options: SDWebImageOptions(rawValue: 0),
+                                                  completed:  {
+                                                    (image, error, cacheType, imageURL) in
+                                                    if error == nil {
+                                                        cell.noImageHintLabel.isHidden = true
+                                                    }
+                                                    else {
+                                                        cell.noImageHintLabel.isHidden = false
+                                                    }
+            })
+        }
         else {
             cell.noImageHintLabel.isHidden = false
             cell.moviePosterImageView.image = UIImage()

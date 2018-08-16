@@ -33,6 +33,7 @@ struct MainListResponseModel {
 
 struct MainListDataModel {
     var posterPath: String
+    var backdropPath: String
     var popularity: Double
     var originalTitle: String
     var title: String
@@ -41,6 +42,7 @@ struct MainListDataModel {
     
     init(feed: [String:AnyObject]) {
         self.posterPath = feed["poster_path"] as? String ?? ""
+        self.backdropPath = feed["backdrop_path"] as? String ?? ""
         self.popularity = feed["popularity"] as? Double ?? 0.0
         self.originalTitle = feed["original_title"] as? String ?? ""
         self.title = feed["title"] as? String ?? ""
