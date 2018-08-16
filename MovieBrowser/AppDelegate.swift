@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         setNavigationBarAppearence()
-        progressHUDSetting()
+        defaultSVProgressHUDSetting()
         defaultSDWebImageViewSetting()
         return true
     }
@@ -55,6 +55,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate {
+    func appDefaultSettings() {
+        setNavigationBarAppearence()
+        defaultSDWebImageViewSetting()
+        defaultSVProgressHUDSetting()
+    }
+    
     func setNavigationBarAppearence() {
         UINavigationBar.appearance().barTintColor = UIColor.mainDark
         UINavigationBar.appearance().tintColor = UIColor(white: 0.9, alpha: 0.9)
@@ -65,7 +71,7 @@ extension AppDelegate {
         UINavigationBar.appearance().isTranslucent = false
     }
     
-    func progressHUDSetting() {
+    func defaultSVProgressHUDSetting() {
         SVProgressHUD.setDefaultMaskType(.none)
         SVProgressHUD.setDefaultStyle(.dark)
         SVProgressHUD.setOffsetFromCenter(UIOffset.zero)
