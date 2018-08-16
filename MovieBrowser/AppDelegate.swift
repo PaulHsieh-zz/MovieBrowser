@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import SDWebImage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         setNavigationBarAppearence()
         progressHUDSetting()
+        defaultSDWebImageViewSetting()
         return true
     }
 
@@ -67,6 +69,11 @@ extension AppDelegate {
         SVProgressHUD.setDefaultMaskType(.none)
         SVProgressHUD.setDefaultStyle(.dark)
         SVProgressHUD.setOffsetFromCenter(UIOffset.zero)
+    }
+    
+    func defaultSDWebImageViewSetting() {
+        SDImageCache.shared().shouldDecompressImages = false
+        SDWebImageDownloader.shared().shouldDecompressImages = false
     }
 }
 
